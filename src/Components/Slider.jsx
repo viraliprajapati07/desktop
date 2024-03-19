@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-import Swiper from 'swiper';
+import Swiper from 'swiper/swiper-bundle'; // Import Swiper bundled version
+import 'swiper/swiper-bundle.min.css'; // Import Swiper styles
 
 
-const Home = () => {
+
+const MyComponent = () => {
   useEffect(() => {
     const bannerSwiper = new Swiper('.banner-carousel', {
       spaceBetween: 0,
@@ -22,141 +24,89 @@ const Home = () => {
       },
     });
 
+    const productSwiper = new Swiper('.product-sliding', {
+      spaceBetween: 30,
+      centeredSlides: false,
+      slidesPerView: 4,
+      loop: false,
+      freeMode: true,
+      grabCursor: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        200: {
+          slidesPerView: 1,
+        },
+        500: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    });
+
+    const influencersSwiper = new Swiper('.influencers-sliding', {
+      spaceBetween: 0,
+      centeredSlides: false,
+      slidesPerView: 'auto',
+      loop: false,
+      freeMode: true,
+      grabCursor: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    // Event handlers
+    const addCartHandler = () => {
+      // Your logic when add to cart button is clicked
+      window.location.href = 'cart.html';
+    };
+
+    const missingItemPopBtnHandler = () => {
+      // Your logic for handling missing item pop-up button click
+      document.getElementById('missing_item_modal').classNameList.remove('show');
+    };
+
+    const missingItemConfPopBtnHandler = () => {
+      // Your logic for handling missing item confirmation pop-up buttons click
+      document.getElementById('missing_item_confmodal').classNameList.remove('show');
+    };
+
+    // Event listeners
+    document.getElementById('pro_addcart_btn').addEventListener('click', addCartHandler);
+    document.getElementById('add_cartBtn').addEventListener('click', addCartHandler);
+    document.getElementById('missing_item_popbtn').addEventListener('click', missingItemPopBtnHandler);
+    document.getElementById('missing_item_confpopbtnY').addEventListener('click', missingItemConfPopBtnHandler);
+    document.getElementById('missing_item_confpopbtnN').addEventListener('click', missingItemConfPopBtnHandler);
+
+    // Cleanup
     return () => {
       bannerSwiper.destroy();
+      productSwiper.destroy();
+      influencersSwiper.destroy();
+
+      document.getElementById('pro_addcart_btn').removeEventListener('click', addCartHandler);
+      document.getElementById('add_cartBtn').removeEventListener('click', addCartHandler);
+      document.getElementById('missing_item_popbtn').removeEventListener('click', missingItemPopBtnHandler);
+      document.getElementById('missing_item_confpopbtnY').removeEventListener('click', missingItemConfPopBtnHandler);
+      document.getElementById('missing_item_confpopbtnN').removeEventListener('click', missingItemConfPopBtnHandler);
     };
   }, []);
-//  import React, { useEffect } from 'react';
-//  import Swiper from 'swiper'; // Import Swiper styles
-
-// const Home = () => {
-//   useEffect(() => {
-//     const bannerSwiper = new Swiper('.banner-carousel', {
-//       spaceBetween: 0,
-//       centeredSlides: false,
-//       slidesPerView: 1,
-//       loop: true,
-//       freeMode: true,
-//       grabCursor: true,
-//       pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//       },
-//       autoplay: {
-//         delay: 5000,
-//         reverseDirection: false,
-//         disableOnInteraction: false,
-//       },
-//     });
-
-//     // Event listeners for adding to cart
-//     const addToCartHandler = () => {
-//       window.location.href = 'cart.html';
-//     };
-
-//     document.getElementById('pro_addcart_btn').addEventListener('click', addToCartHandler);
-//     document.getElementById('add_cartBtn').addEventListener('click', addToCartHandler);
-
-//     // Event listeners for handling missing item pop-up
-//     const missingItemPopBtnHandler = () => {
-//       // Hide missing item modal
-//       const missingItemModal = document.getElementById('missing_item_modal');
-//       missingItemModal.classList.remove('show');
-//     };
-
-//     document.getElementById('missing_item_popbtn').addEventListener('click', missingItemPopBtnHandler);
-
-//     // Event listeners for handling missing item confirmation pop-up
-//     const missingItemConfPopBtnHandler = () => {
-//       // Hide missing item confirmation modal
-//       const missingItemConfModal = document.getElementById('missing_item_confmodal');
-//       missingItemConfModal.classList.remove('show');
-//     };
-
-//     document.getElementById('missing_item_confpopbtnY').addEventListener('click', missingItemConfPopBtnHandler);
-//     document.getElementById('missing_item_confpopbtnN').addEventListener('click', missingItemConfPopBtnHandler);
-
-//     // Cleanup
-//     return () => {
-//       bannerSwiper.destroy();
-
-//       // Remove event listeners
-//       document.getElementById('pro_addcart_btn').removeEventListener('click', addToCartHandler);
-//       document.getElementById('add_cartBtn').removeEventListener('click', addToCartHandler);
-//       document.getElementById('missing_item_popbtn').removeEventListener('click', missingItemPopBtnHandler);
-//       document.getElementById('missing_item_confpopbtnY').removeEventListener('click', missingItemConfPopBtnHandler);
-//       document.getElementById('missing_item_confpopbtnN').removeEventListener('click', missingItemConfPopBtnHandler);
-//     };
-//   }, []);
 
   return (
-    <>
-    <div className="mobile-sidebar">
-	<div className="mobile-sidebar-inner">
-		<div className="mobile-sidebar-innerflex">
-			<div className="msi-inner-top">
-				<button type="button" className="btn mobile-sidebar-closeBtn"><img src="assets/images/modal-close.png" alt="close icon"/></button>
-				<ul className="msi-menubar">
-					<li><a href="index.html" className="active">home</a></li>
-					<li className="mobile-menu-dropdown"><a href="#" className="mmd-link">my account <i className="fa fa-angle-down" aria-hidden="true"></i></a>
-						<ul>
-							<li><a href="profile.html">Profile</a></li>
-							<li><a href="order-list.html">my orders</a></li>
-							<li><a href="wishlist.html">whislist</a></li>
-						</ul>
-					</li>
-					<li><a href="about.html">about us</a></li>
-					<li><a href="contact.html">contact us</a></li>
-					<li><a href="terms.html">terms & conditions</a></li>
-					<li><a href="feedback.html">feedback</a></li>
-					<li><a href="#">tell a friend</a></li>
-				</ul>
-				<div className="lang-notif">
-					<div className="lang-notif-inner">
-						<span>Language</span>
-						<span className="lang-switchlink"><a href="#">ar</a>/<a href="#">en</a></span> 
-					</div>
-					<div className="lang-notif-inner">
-						<span>notification</span>
-						<span className="lni-swicthes">
-							<div className="custom-control custom-switch">
-							  <label className="custom-control-label" for="customSwitch1">
-							  	 <input type="checkbox" className="custom-control-input" id="customSwitch1" checked/>
-							  	 <span className="custom-control-label-span"></span>
-							  </label>
-							</div>
-						</span> 
-					</div>
-					<div className="msi-logobar">
-						<img src="assets/images/main-logo.png" alt="brand logo"/>
-					</div>
-					<div className="msi-socialbar">
-						<ul>
-							<li><a href="javascript:void(0)"><img src="assets/images/twitter-blue.png" alt="twitter icon"/></a></li>
-							<li><a href="javascript:void(0)"><img src="assets/images/instagram-blue.png" alt="twitter icon"/></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div className="msi-inner-bottom">
-				<div className="msi-powerby-logobar">
-					<div className="msi-powerby-logobar-inner">
-						<img src="assets/images/msi-si-logo.png" alt="brand logo"/>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-{/* <!-- end mobile sidebar --> */}
-
-<div className="wrapper">
-{/* 
-	
-	{/* <!-- end main header --> */}
-
-	{/* <!-- start middle content --> */}
-	<section className="middle-content">
+    <div>
+<section className="middle-content">
 		<div className="banner">
 			<div className="swiper banner-inner banner-carousel">
 				<div className="common-slick-slide swiper-wrapper">
@@ -1106,145 +1056,8 @@ const Home = () => {
 			</div>
 		</div>
 	</section>
-	{/* <!-- end middle content -->
+    </div>
+  );
+};
 
-	<!-- start main footer --> */}
-	<footer className="main-footer" id="contactus_sec">
-		<div className="mf-top">
-			<div className="container">
-				<div className="row">
-					<div className="col-12">
-						<div className="mf-title common-main-title">
-							<h2>Contact us</h2>
-						</div>
-					</div>
-				</div>
-				<div className="row">
-					<div className="col-12">
-						<div className="mf-contactdata">
-							<div className="mfc-flex">
-								<div className="mfc-flexdata">
-									<h3>office number</h3>
-									<h4><a href="javascript:void(0)">6667388</a></h4>
-								</div>
-							</div>
-							<div className="mfc-flex">
-								<div className="mfc-flexdata">
-									<h3>office number</h3>
-									<h4><a href="javascript:void(0)">6667388</a></h4>
-								</div>
-							</div>
-							<div className="mfc-flex">
-								<div className="mfc-flexdata">
-									<h3>office number</h3>
-									<h4><a href="javascript:void(0)">6667388</a></h4>
-								</div>
-							</div>
-							<div className="mfc-flex">
-								<div className="mfc-flexdata">
-									<h3>office number</h3>
-									<h4><a href="javascript:void(0)">6667388</a></h4>
-								</div>
-							</div>
-						</div>
-						<div className="mfc-saperator">
-							<div className="mfc-saperator-line"></div>
-						</div>						
-					</div>
-				</div>
-				<div className="row">
-					<div className="col-lg-6 col-md-6 col-sm-12 col-12">
-						<div className="mfc-form">
-							<form>
-								<div className="form-group">
-									<input type="text" name="name" placeholder="Name" className="form-control"/>
-								</div>
-								<div className="form-group">
-									<input type="text" name="phone" placeholder="Email or Phone number" className="form-control"/>
-								</div>
-								<div className="form-group">
-									<textarea type="textarea" name="commnet" placeholder="Comment" className="form-control"></textarea>
-								</div>
-								<div className="form-group mb-0 mfc-formsend-btn">
-									<button type="button" className="btn">Send</button>
-								</div>
-							</form>
-						</div>
-					</div>
-					<div className="col-lg-6 col-md-6 col-sm-12 col-12">
-						<div className="mfc-map">
-							<h3>STORE ADDRESS</h3>
-							<p>Store address, Street, Buliding, Office 1012</p>
-							<div className="mfc-mapinner">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27814.41193999645!2d47.961267178803226!3d29.37610101465698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf9c83ce455983%3A0xc3ebaef5af09b90e!2sKuwait%20City%2C%20Kuwait!5e0!3m2!1sen!2sin!4v1684418108436!5m2!1sen!2sin" style={{border:"0", allowfullscreen:"", loading:"lazy" ,referrerpolicy:"no-referrer-when-downgrade"}}></iframe>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div className="mf-bottom">
-			<div className="container">
-				<div className="row">
-					<div className="col-lg-6 col-md-12 col-sm-12 col-12 align-self-center">
-						<div className="mf-copyright">
-							<p>© 2023 Tashead. All rights reserved.</p>
-						</div>
-					</div>
-					<div className="col-lg-6 col-md-12 col-sm-12 col-12 align-self-center">
-						<div className="mf-socials">
-							<ul>
-								<li><a href="javascript:void(0)"><img src="assets/images/twitter.png" alt="twitter icon"/></a></li>
-								<li><a href="javascript:void(0)"><img src="assets/images/instagram.png" alt="twitter icon"/></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	{/* <!-- end main footer -->
-
-	<!-- scroll top icon --> */}
-	<div className="scroll-top"> 
-		<a className="scrollToTop" href="#"> 
-		<i className="fa fa-angle-up" aria-hidden="true"></i></a> 
-	</div>
-	{/* <!-- end scroll top icon --> */}
-
-	<div className="comm-msg-modal" id="missing_item_modal">
-		<div className="modl-inner">
-			<div className="modl-header">
-				<h3>Alert</h3>
-			</div>
-			<div className="modl-body">
-				<h4>Missing items</h4>
-				<div className="modl-body-btns">
-					<button type="button" className="btn" id="missing_item_popbtn">Ok</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div className="comm-msg-modal" id="missing_item_confmodal">
-		<div className="modl-inner">
-			<div className="modl-header">
-				<h3>Alert</h3>
-			</div>
-			<div className="modl-body">
-				<h4>Are you sure!</h4>
-				<div className="modl-body-btns d-flex justify-content-between">
-					<button type="button" className="btn" id="missing_item_confpopbtnY">Yes</button>
-					<button type="button" className="btn" id="missing_item_confpopbtnN">No</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-</div>
-    </>
-    )
-    }
-
-
-export default Home;
+export default MyComponent;

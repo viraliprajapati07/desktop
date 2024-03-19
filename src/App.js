@@ -8,6 +8,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Feedback from './Components/Feedback';
 
+
 const App = () => {
   return (
     <Router>
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/feedback" element={<Feedback />} />
+        
       </Routes>
     </Router>
   );
