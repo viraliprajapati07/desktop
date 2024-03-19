@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react';
-import Swiper from 'swiper';
 
+
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Swiper from 'swiper';
 
 const Home = () => {
   useEffect(() => {
@@ -25,69 +27,9 @@ const Home = () => {
     return () => {
       bannerSwiper.destroy();
     };
-  }, []);
-//  import React, { useEffect } from 'react';
-//  import Swiper from 'swiper'; // Import Swiper styles
+  }, 
+  []);
 
-// const Home = () => {
-//   useEffect(() => {
-//     const bannerSwiper = new Swiper('.banner-carousel', {
-//       spaceBetween: 0,
-//       centeredSlides: false,
-//       slidesPerView: 1,
-//       loop: true,
-//       freeMode: true,
-//       grabCursor: true,
-//       pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//       },
-//       autoplay: {
-//         delay: 5000,
-//         reverseDirection: false,
-//         disableOnInteraction: false,
-//       },
-//     });
-
-//     // Event listeners for adding to cart
-//     const addToCartHandler = () => {
-//       window.location.href = 'cart.html';
-//     };
-
-//     document.getElementById('pro_addcart_btn').addEventListener('click', addToCartHandler);
-//     document.getElementById('add_cartBtn').addEventListener('click', addToCartHandler);
-
-//     // Event listeners for handling missing item pop-up
-//     const missingItemPopBtnHandler = () => {
-//       // Hide missing item modal
-//       const missingItemModal = document.getElementById('missing_item_modal');
-//       missingItemModal.classList.remove('show');
-//     };
-
-//     document.getElementById('missing_item_popbtn').addEventListener('click', missingItemPopBtnHandler);
-
-//     // Event listeners for handling missing item confirmation pop-up
-//     const missingItemConfPopBtnHandler = () => {
-//       // Hide missing item confirmation modal
-//       const missingItemConfModal = document.getElementById('missing_item_confmodal');
-//       missingItemConfModal.classList.remove('show');
-//     };
-
-//     document.getElementById('missing_item_confpopbtnY').addEventListener('click', missingItemConfPopBtnHandler);
-//     document.getElementById('missing_item_confpopbtnN').addEventListener('click', missingItemConfPopBtnHandler);
-
-//     // Cleanup
-//     return () => {
-//       bannerSwiper.destroy();
-
-//       // Remove event listeners
-//       document.getElementById('pro_addcart_btn').removeEventListener('click', addToCartHandler);
-//       document.getElementById('add_cartBtn').removeEventListener('click', addToCartHandler);
-//       document.getElementById('missing_item_popbtn').removeEventListener('click', missingItemPopBtnHandler);
-//       document.getElementById('missing_item_confpopbtnY').removeEventListener('click', missingItemConfPopBtnHandler);
-//       document.getElementById('missing_item_confpopbtnN').removeEventListener('click', missingItemConfPopBtnHandler);
-//     };
-//   }, []);
 
   return (
     <>
@@ -158,9 +100,9 @@ const Home = () => {
 	{/* <!-- start middle content --> */}
 	<section className="middle-content">
 		<div className="banner">
-			<div className="swiper banner-inner banner-carousel">
-				<div className="common-slick-slide swiper-wrapper">
-					<div className="swiper-slide banner-item">
+			<div className="swiper banner-inner banner-carousel swiper-initialized swiper-horizontal swiper-free-mode swiper-backface-hidden">
+				<div className="common-slick-slide swiper-wrapper"id="swiper-wrapper-994c69b19865957a"aria-live="off" style={{cursor: "grab", transitionduration: "0ms", transform: "translate3d(-3052px, 0px, 0px)", transitiondelay:"0ms"}}>
+					<div className="swiper-slide banner-item swiper-slide-next"aria-label="" data-swiper-slide-index=""style={{width: "1526px"}}>
 						<div className="banner-image">
 							<img src="assets/images/banner.png" alt="banner"/>
 						</div>
@@ -179,7 +121,7 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
-					<div className="swiper-slide banner-item">
+					<div className="swiper-slide banner-item swiper-slide-prev"aria-label="" data-swiper-slide-index=""style={{width: "1526px"}}>
 						<div className="banner-image">
 							<img src="assets/images/banner2.png" alt="banner"/>
 						</div>
@@ -198,7 +140,7 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
-					<div className="swiper-slide banner-item">
+					<div className="swiper-slide banner-item swiper-slide-active"aria-label="" data-swiper-slide-index=""style={{width: "1526px"}}>
 						<div className="banner-image">
 							<img src="assets/images/banner.png" alt="banner"/>
 						</div>
@@ -306,7 +248,7 @@ const Home = () => {
 				</div>
 				<div className="swiper product-sliding product-common-swiper">
 					<div className="row common-slick-slide swiper-wrapper">
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+					<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active "role="group" aria-label='1 / 5 ' style={{width : "255px", marginRight:"30px"}}>
 							<div className="product-box">
 								<div className="product-img text-center">
 									<img src="assets/images/pro-1.png" alt="product image"/>
@@ -354,7 +296,7 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active "role="group" aria-label='2 / 5 ' style={{width : "255px", marginRight:"30px"}}>
 							<div className="product-box">
 								<div className="product-img text-center">
 									<img src="assets/images/pro-2.png" alt="product image"/>
@@ -402,7 +344,7 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active "role="group" aria-label='3 / 5 ' style={{width : "255px", marginRight:"30px"}}>
 							<div className="product-box">
 								<div className="product-img text-center">
 									<img src="assets/images/pro-3.png" alt="product image"/>
@@ -450,7 +392,7 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active "role="group" aria-label='4 / 5 ' style={{width : "255px", marginRight:"30px"}}>
 							<div className="product-box">
 								<div className="product-img text-center">
 									<img src="assets/images/pro-4.png" alt="product image"/>
@@ -571,7 +513,7 @@ const Home = () => {
 				</div>
 				<div className="swiper product-sliding product-common-swiper">
 					<div className="row common-slick-slide swiper-wrapper">
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+					<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active "role="group" aria-label='2 / 5 ' style={{width : "255px", marginRight:"30px"}}>
 							<div className="product-box">
 								<div className="product-img text-center">
 									<img src="assets/images/pro-5.png" alt="product image"/>
@@ -619,7 +561,7 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active "role="group" aria-label='2 / 5 ' style={{width : "255px", marginRight:"30px"}}>
 							<div className="product-box">
 								<div className="product-img text-center">
 									<img src="assets/images/pro-6.png" alt="product image"/>
@@ -667,7 +609,7 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active "role="group" aria-label='2 / 5 ' style={{width : "255px", marginRight:"30px"}}>
 							<div className="product-box">
 								<div className="product-img text-center">
 									<img src="assets/images/pro-7.png" alt="product image"/>
@@ -715,7 +657,7 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active "role="group" aria-label='2 / 5 ' style={{width : "255px", marginRight:"30px"}}>
 							<div className="product-box">
 								<div className="product-img text-center">
 									<img src="assets/images/pro-8.png" alt="product image"/>
@@ -853,42 +795,42 @@ const Home = () => {
 							<div className="row">
 								<div className="col-lg-6 col-md-6 col-sm-12 col-12 cm-col-100">
 									<div className="home-catname">
-										<a href="category-list.html">
+										<Link to ="/categorlist">
 											<div className="home-catimg">
 												<img src="assets/images/cat-back-1.png" alt="category image"/>
 												<h4>MATRIAL</h4>
 											</div>
-										</a>
+										</Link>
 			 						</div>
 								</div>
 								<div className="col-lg-6 col-md-6 col-sm-12 col-12 cm-col-100">
 									<div className="home-catname">
-										<a href="category-list.html">
+									<Link to ="/categorlist">
 											<div className="home-catimg">
 												<img src="assets/images/cat-back-2.png" alt="category image"/>
 												<h4>TOOLS</h4>
 											</div>
-										</a>
+										</Link>
 			 						</div>
 								</div>
 								<div className="col-lg-6 col-md-6 col-sm-12 col-12 cm-col-100">
 									<div className="home-catname">
-										<a href="category-list.html">
+									<Link to ="/categorlist">
 											<div className="home-catimg">
 												<img src="assets/images/cat-back-3.png" alt="category image"/>
 												<h4>ASMENT</h4>
 											</div>
-										</a>
+										</Link>
 			 						</div>
 								</div>
 								<div className="col-lg-6 col-md-6 col-sm-12 col-12 cm-col-100">
 									<div className="home-catname">
-										<a href="category-list.html">
+									<Link to ="/categorlist">
 											<div className="home-catimg">
 												<img src="assets/images/cat-back-4.png" alt="category image"/>
 												<h4>WOOD</h4>
 											</div>
-										</a>
+										</Link>
 			 						</div>
 								</div>
 							</div>

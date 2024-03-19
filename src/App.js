@@ -7,6 +7,8 @@ import Influencers from './Components/Influencers';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Feedback from './Components/Feedback';
+import Category from './Components/Category';
+import Categorlist from './Components/Categorlist';
 
 
 const App = () => {
@@ -20,8 +22,10 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/feedback" element={<Feedback />} />
-        
+        <Route path="/categorlist" element={<Categorlist />} />
+        {/* <Route path="/category" element={<Category />} /> */}
       </Routes>
+      
     </Router>
   );
 }

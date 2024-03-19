@@ -34,7 +34,7 @@ function Influencers() {
 					</div>
 					<div className="swiper product-sliding product-common-swiper">
 						<div className="row common-slick-slide swiper-wrapper">
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-1.png" alt="product image"/>
@@ -82,7 +82,7 @@ function Influencers() {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-2.png" alt="product image"/>
@@ -130,7 +130,7 @@ function Influencers() {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-3.png" alt="product image"/>
@@ -178,7 +178,7 @@ function Influencers() {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-4.png" alt="product image"/>
@@ -299,7 +299,7 @@ function Influencers() {
 					</div>
 					<div className="swiper product-sliding product-common-swiper">
 						<div className="row common-slick-slide swiper-wrapper">
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-5.png" alt="product image"/>
@@ -347,7 +347,7 @@ function Influencers() {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-6.png" alt="product image"/>
@@ -395,7 +395,7 @@ function Influencers() {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-7.png" alt="product image"/>
@@ -443,7 +443,7 @@ function Influencers() {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-8.png" alt="product image"/>
@@ -491,7 +491,7 @@ function Influencers() {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-5.png" alt="product image"/>
@@ -564,7 +564,7 @@ function Influencers() {
 					</div>
 					<div className="swiper product-sliding product-common-swiper">
 						<div className="row common-slick-slide swiper-wrapper">
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-1.png" alt="product image"/>
@@ -612,7 +612,7 @@ function Influencers() {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-2.png" alt="product image"/>
@@ -660,7 +660,7 @@ function Influencers() {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-3.png" alt="product image"/>
@@ -708,7 +708,7 @@ function Influencers() {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-4.png" alt="product image"/>
@@ -756,7 +756,7 @@ function Influencers() {
 									</div>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
+							<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitemcol-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem swiper-slide-active" style={{width : "255px", marginRight:"30px"}}>
 								<div className="product-box">
 									<div className="product-img text-center">
 										<img src="assets/images/pro-1.png" alt="product image"/>
