@@ -9,23 +9,44 @@ import Contact from './Components/Contact';
 import Feedback from './Components/Feedback';
 import Category from './Components/Category';
 import Categorlist from './Components/Categorlist';
+import Orderlist from './Components/Orderlist';
+import Profileinfo from './Components/Profileinfo';
+import Addresses from './Components/Addresses';
+import Footer from './Components/Footer';
+import Changepassword from './Components/Changepassword';
+import Cart from './Components/Cart';
+import Registration from './Components/Registration';
+import Register from './Components/Register';
+
+
+
 
 
 const App = () => {
   return (
     <Router>
       <Header />
+      
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/influencers" element={<Influencers />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/categorlist" element={<Categorlist />} />
-        {/* <Route path="/category" element={<Category />} /> */}
+        <Route path="/orderlist" element={<Orderlist />} />
+        <Route path="/profileinfo" element={<Profileinfo />} />
+        <Route path='/addresses' element={<Addresses/>}/>
+        <Route path='/changepassword' element={<Changepassword/>}/>
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path="/category" element={<Category />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/register" element={<Register/>} />
+       
       </Routes>
-      
+      <Footer/>
     </Router>
   );
 }

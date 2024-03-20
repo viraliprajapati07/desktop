@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -7,9 +7,16 @@ const Header = () => {
       <div className="desktop-view-nav main-header">
         <div className="container">
           <div className="row">
-            <div className="col-12">
+            <div className="col-12 p-0">
               <div className="m-headerinner">
-                <div className="m-headerinner-l">
+                <div className='bar-toggler change'>
+                <div className='bar-toggler-inner'>
+                  <div className='bar1'></div>
+                  <div className='bar2'></div>
+                  <div className='bar3'></div>
+                </div>
+                </div>
+                <div className="m-headerinner-r">
                   <div className="m-headerinner-logo">
                     <img src="assets/images/main-logo.png" alt="brand logo"/>
                   </div>
@@ -46,10 +53,11 @@ const Header = () => {
                             </a>
                           </div>
                           <div className="cart-icon">
-                            <a href="cart.html">
+                         <Link to ="cart">
                               <img src="assets/images/cart-icon.png" alt="cart icon"/>
+                              
                               <span>3</span>
-                            </a>
+                              </Link>
                           </div>
                         </div>
                       </div>

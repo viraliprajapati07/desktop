@@ -8,6 +8,31 @@
 ===========================================================*/
 
 /*====================== 2. Basic ========================*/
+.carousel-container {
+    position: relative;
+  }
+
+  .radio-buttons-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .radio-buttons-container input[type="radio"] {
+    appearance: none;
+    border: 1px solid #000;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .radio-buttons-container input[type="radio"]:checked {
+    background-color: #000;
+  }
 body {
     font-family: 'hn';
     font-size: 14px;
