@@ -33,25 +33,27 @@ import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+
 const Home = () => {
-  const [index, setIndex] = useState(0);
+	const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const nextIndex = (index + 1) % 3;
-      setIndex(nextIndex);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [index]);
-
-  const handleRadioChange = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
+	const handleSelect = (selectedIndex) => {
+	  setIndex(selectedIndex);
+	};
+  
+	useEffect(() => {
+	  const interval = setInterval(() => {
+		const nextIndex = (index + 1) % 3; // Change '3' to the total number of images
+		setIndex(nextIndex);
+	  }, 2500);
+  
+	  return () => clearInterval(interval);
+	}, [index]);
+  
+	const handleRadioChange = (selectedIndex) => {
+	  setIndex(selectedIndex);
+	};
+	
   return (
     <>
     <div className="mobile-sidebar">
@@ -121,65 +123,98 @@ const Home = () => {
 	<section className="middle-content">
 	<div className="banner">
       <div className="swiper banner-inner banner-carousel swiper-initialized swiper-horizontal swiper-free-mode swiper-backface-hidden">
-        <Carousel activeIndex={index} onSelect={handleSelect} interval={null} className="common-slick-slide">
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="assets/images/banner.png"
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h1>ALL YOU NEED TO START<br/>YOUR DREAM HOME</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-                volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
-                autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-                consequat, vel illum dolore eu feugiat
-              </p>
-              <a href="javascript: void(0)" className="banner-btn">Start Shopping</a>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="assets/images/banner2.png"
-              alt="Second slide"
-            />
-            <Carousel.Caption>
-              <h1>ALL YOU NEED TO START<br/>YOUR DREAM HOME</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-                volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
-                autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-                consequat, vel illum dolore eu feugiat
-              </p>
-              <a href="javascript: void(0)" className="banner-btn">Start Shopping</a>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="assets/images/banner.png"
-              alt="Third slide"
-            />
-            <Carousel.Caption>
-              <h1>ALL YOU NEED TO START<br/>YOUR DREAM HOME</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-                volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
-                autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-                consequat, vel illum dolore eu feugiat
-              </p>
-              <a href="javascript: void(0)" className="banner-btn">Start Shopping</a>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
+	  <div className="carousel-container" style={{ position: "relative"}}>
+      <Carousel activeIndex={index} onSelect={handleSelect} interval={null} className="common-slick-slide" controls={false} indicators={false}>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="assets/images/banner.png"
+            alt="First slide"
+          />
+          <Carousel.Caption className='caption'>
+			<div className='row'>
+				<div className='col-md-6'>
+					<div className='slidcontent'>
+            <h1 className='h1'>ALL YOU NEED TO START<br/>YOUR DREAM HOME</h1>
+            <p className='p'>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+              volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
+              autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+              consequat, vel illum dolore eu feugiat
+            </p>
+            <a href="javascript: void(0)" className="banner-btn">Start Shopping</a>
+			</div>
+			</div>
+			</div>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="assets/images/banner2.png"
+            alt="Second slide"
+          />
+         <Carousel.Caption className='caption'>
+			<div className='row'>
+				<div className='col-md-6'>
+					<div className='slidcontent'>
+            <h1 className='h1'>ALL YOU NEED TO START<br/>YOUR DREAM HOME</h1>
+            <p className='p'>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+              volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
+              autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+              consequat, vel illum dolore eu feugiat
+            </p>
+            <a href="javascript: void(0)" className="banner-btn">Start Shopping</a>
+			</div>
+			</div>
+			</div>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="assets/images/banner.png"
+            alt="Third slide"
+          />
+        <Carousel.Caption className='caption'>
+			<div className='row'>
+				<div className='col-md-6'>
+					<div className='slidcontent'>
+            <h1 className='h1'>ALL YOU NEED TO START<br/>YOUR DREAM HOME</h1>
+            <p className='p'>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+              volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
+              autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+              consequat, vel illum dolore eu feugiat
+            </p>
+            <a href="javascript: void(0)" className="banner-btn">Start Shopping</a>
+			</div>
+			</div>
+			</div>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+      <div className="radio-buttons-container">
+        {[0, 1, 2].map((idx) => (
+          <input
+            key={idx}
+            type="radio"
+            id={`radio${idx}`}
+            name="slider"
+            style={{ marginRight: '10px', cursor: 'pointer' }}
+            checked={index === idx}
+            onChange={() => handleRadioChange(idx)}
+          />
+        ))}
+      </div>
+    </div>
         <div className="swiper-pagination"></div>
       </div>
 	  </div>

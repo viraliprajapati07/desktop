@@ -19,9 +19,6 @@ import Registration from './Components/Registration';
 import Register from './Components/Register';
 
 
-
-
-
 const App = () => {
   return (
     <Router>

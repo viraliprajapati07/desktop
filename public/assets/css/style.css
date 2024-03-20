@@ -8,31 +8,70 @@
 ===========================================================*/
 
 /*====================== 2. Basic ========================*/
+.h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'hn-bold';
+    font-size: 40px;
+    line-height: 44px;
+}
+.p {
+    color: #fff;
+    font-family: 'hn';
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 20px;
+}
+
+.caption{
+   text-align: left;
+}
+.slidcontent{
+   margin-bottom: 35%;
+}
+.banner-btn {
+    display: inline-flex;
+    background: #F6CE9A;
+    border-radius: 30px;
+    min-width: 154px;
+    height: 42px;
+    justify-content: center;
+    align-items: center;
+    color: #474455;
+    font-family: 'hn-bold';
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 24px;
+}
+
 .carousel-container {
     position: relative;
+    
   }
-
+  
   .radio-buttons-container {
     position: absolute;
-    bottom: 20px;
-    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    margin-bottom: 7px;
   }
-
+  
   .radio-buttons-container input[type="radio"] {
     appearance: none;
-    border: 1px solid #000;
-    width: 15px;
-    height: 15px;
+    border: 2px solid #ffffff; /* Adjust color as needed */
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     cursor: pointer;
+    margin: 0 5px;
   }
-
+  
   .radio-buttons-container input[type="radio"]:checked {
-    background-color: #000;
+    background-color: #f8f8f8; /* Adjust color as needed */
   }
+  
 body {
     font-family: 'hn';
     font-size: 14px;
