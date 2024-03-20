@@ -24,9 +24,11 @@ function Registration() {
 											</div>
 											<div className="common-credform-btns">
 												<div className="common-credform-loginbtns mb-0">
+												<Link to= "/register">
 													<button type="button" className="btn registration-nextbtn login-btn" id="registration_nextbtn">
 														Next
 													</button>
+													</Link>
 												</div>
 											</div>
 										</form>
@@ -42,11 +44,11 @@ function Registration() {
 											</div>
 											<div className="common-credform-btns">
 												<div className="common-credform-loginbtns mb-0">
-                                                    <Link to= "/register">
+											
 													<button type="button" className="btn registration-otp-nextbtn login-btn" id="registration_otp_nextbtn">
 														Next
 													</button>
-                                                    </Link>
+                                                    
 												</div>
 											</div>
 										</form>
