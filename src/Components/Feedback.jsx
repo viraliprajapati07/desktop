@@ -10,12 +10,7 @@ function Feedback() {
   const handleStarHover = (index) => {
     setActiveStars(index + 1);
   };
-
-  const handleMouseLeave = () => {
-    setActiveStars(0);
-  };
-
-  return (
+ return (
     <>
       <section className="middle-content">
         <div className="middle-100vh-content">
@@ -38,7 +33,7 @@ function Feedback() {
                                 className={`fa fa-star-o${activeStars >= value ? ' active' : ''}`}
                                 onClick={() => handleStarClick(index)}
                                 onMouseEnter={() => handleStarHover(index)}
-                                onMouseLeave={handleMouseLeave}
+                              
                               />
                             ))}
                           </div>

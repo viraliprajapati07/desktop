@@ -1,22 +1,21 @@
-import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
 
 const Header = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(prevState => !prevState);
+  };
+  
   return (
     <header className="sticky-top">
       <div className="desktop-view-nav main-header">
         <div className="container">
           <div className="row">
-            <div className="col-12 p-0">
+            <div className="col-12">
               <div className="m-headerinner">
-                <div className='bar-toggler change'>
-                <div className='bar-toggler-inner'>
-                  <div className='bar1'></div>
-                  <div className='bar2'></div>
-                  <div className='bar3'></div>
-                </div>
-                </div>
-                <div className="m-headerinner-r">
+                <div className="m-headerinner-l">
                   <div className="m-headerinner-logo">
                     <img src="assets/images/main-logo.png" alt="brand logo"/>
                   </div>
@@ -37,20 +36,22 @@ const Header = () => {
                           <div className="language-switch">
                             <a href="#">AR</a> <span>/</span> <a href="#">EN</a>
                           </div>
-                          <div className="user-propic">
-                            <a href="#" className="user-droptoggle">
-                              <img src="assets/images/user-propic.png" alt="profile picture"/>
-                            </a>
-                            <ul className="user-dropdown">
-                              <li><a href="javascript:void(0)">Menu 1</a></li>
-                              <li><a href="javascript:void(0)">Menu 2</a></li>
-                              <li><a href="javascript:void(0)">Menu 3</a></li>
-                            </ul>
-                          </div>
+                          <div class="user-propic">
+													<a href="#" class="user-droptoggle"onClick={toggleDropdown}>
+														<img src="assets/images/user-propic.png" alt="profile picture"/>
+													</a>
+                          {isDropdownOpen && (
+													<ul class="user-dropdown" style={{display:" block"}}>
+														<li><a href="javascript:void(0)">Menu 1</a></li>
+														<li><a href="javascript:void(0)">Menu 2</a></li>
+														<li><a href="javascript:void(0)">Menu 3</a></li>
+													</ul>
+                          )}
+												</div>
                           <div className="fav-pro">
-                            <a href="wishlist.html">
+                            <Link to="/wishlist">
                               <img src="assets/images/fav-star.png" alt="fav star icon"/>
-                            </a>
+                            </Link>
                           </div>
                           <div className="cart-icon">
                          <Link to ="cart">

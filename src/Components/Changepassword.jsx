@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Changepassword() {
   return (
@@ -28,9 +29,11 @@ function Changepassword() {
 											</div>
 											<div class="common-credform-btns">
 												<div class="common-credform-loginbtns mb-0">
+													<Link to = "/login">
 													<button type="button" class="btn forgotpass-sendbtn login-btn" id="changepass_updatebtn">
 														Update
 													</button>
+													</Link>
 												</div>
 											</div>
 										</form>

@@ -30,16 +30,18 @@ function Profileinfo() {
 										<p>Abu Hlefa</p>
 									</div>
 									<div className="mpinfoi-right">
-										<a href="change-name.html" className="mpinfoi-right-editBtn">Edit</a>
+									<Link to="/changename" className="mpinfoi-right-editBtn">Edit</Link>
 									</div>
 								</div>
 								<div className="main-profile-information-inner">
 									<div className="mpinfoi-left">
+									
 										<label>Email:</label>
+									
 										<p>vishal.vnerds@gmail.com</p>
 									</div>
 									<div className="mpinfoi-right">
-										<a href="change-email.html" className="mpinfoi-right-editBtn">Edit</a>
+									<Link to="/changename" className="mpinfoi-right-editBtn">Edit</Link>
 									</div>
 								</div>
 								<div className="main-profile-information-inner">
@@ -48,7 +50,7 @@ function Profileinfo() {
 										<p>+91 9664741462</p>
 									</div>
 									<div className="mpinfoi-right">
-										<a href="change-mobile.html" className="mpinfoi-right-editBtn">Edit</a>
+									<Link to="/changename"  className="mpinfoi-right-editBtn">Edit</Link>
 									</div>
 								</div>
 							</div>

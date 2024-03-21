@@ -43,8 +43,8 @@ function Cart() {
 				<div className="row">
 					<div className="col-12">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="category.html">Product</a></li>
+							<li><Link to="/home">Home</Link></li>
+							<li><Link to="/category">Product</Link></li>
 							<li>Cart</li>
 						</ul>
 					</div>

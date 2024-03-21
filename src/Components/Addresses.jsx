@@ -31,7 +31,7 @@ function Addresses() {
 									<p>Block Block A, St. 69 Street, House 2</p>
 									<p class="profile-username-txt">Abu Hlefa</p>
 									<div class="profile-address-ed">
-										<a href="edit-address.html" class="pae-addEdit">Edit</a>
+										<Link to = "/editaddress" class="pae-addEdit">Edit</Link>
 										<button type="button" class="btn pae-addDelete">Remove</button>
 									</div>
 								</div>
@@ -45,7 +45,7 @@ function Addresses() {
 									<p>Block Block A, St. 69 Street, House 2</p>
 									<p class="profile-username-txt">Abu Hlefa</p>
 									<div class="profile-address-ed">
-										<a href="edit-address.html" class="pae-addEdit">Edit</a>
+										<Link to = "/editaddress" class="pae-addEdit">Edit</Link>
 										<button type="button" class="btn pae-addDelete">Remove</button>
 									</div>
 								</div>
@@ -59,7 +59,7 @@ function Addresses() {
 									<p>Block Block A, St. 69 Street, House 2</p>
 									<p class="profile-username-txt">Abu Hlefa</p>
 									<div class="profile-address-ed">
-										<a href="edit-address.html" class="pae-addEdit">Edit</a>
+										<Link to = "/editaddress" class="pae-addEdit">Edit</Link>
 										<button type="button" class="btn pae-addDelete">Remove</button>
 									</div>
 								</div>
@@ -73,7 +73,7 @@ function Addresses() {
 									<p>Block Block A, St. 69 Street, House 2</p>
 									<p class="profile-username-txt">Abu Hlefa</p>
 									<div class="profile-address-ed">
-										<a href="edit-address.html" class="pae-addEdit">Edit</a>
+										<Link to = "/editaddress" class="pae-addEdit">Edit</Link>
 										<button type="button" class="btn pae-addDelete">Remove</button>
 									</div>
 								</div>

@@ -67,9 +67,11 @@ function Orderlist() {
 										</td>
 										<td><span className="wishlist-status-tag wishlist-in-stock">Completed</span></td>
 										<td>
+											
 											<div className="wishlist-addcartbtn">
-												<a href="order-view.html" className="orderdetail-viewLink" id="orderdetail_viewLink">View</a>
+											<Link to="/orderview"className="orderdetail-viewLink" id="orderdetail_viewLink">View</Link>
 											</div>
+											
 										</td>
 									</tr>
 									<tr>
@@ -92,7 +94,7 @@ function Orderlist() {
 										<td><span className="wishlist-status-tag wishlist-out-stock">Cancelled</span></td>
 										<td>
 											<div className="wishlist-addcartbtn">
-												<a href="order-view.html" className="orderdetail-viewLink" id="orderdetail_viewLink">View</a>
+												<Link to="/orderview" className="orderdetail-viewLink" id="orderdetail_viewLink">View</Link>
 											</div>
 										</td>
 									</tr>
@@ -116,7 +118,7 @@ function Orderlist() {
 										<td><span className="wishlist-status-tag order-processing-tag">Processing</span></td>
 										<td>
 											<div className="wishlist-addcartbtn">
-												<a href="order-view.html" className="orderdetail-viewLink" id="orderdetail_viewLink">View</a>
+											<Link to="/orderview" className="orderdetail-viewLink" id="orderdetail_viewLink">View</Link>
 											</div>
 										</td>
 									</tr>

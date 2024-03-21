@@ -17,6 +17,13 @@ import Changepassword from './Components/Changepassword';
 import Cart from './Components/Cart';
 import Registration from './Components/Registration';
 import Register from './Components/Register';
+import Cartpayment from './Components/Cartpayment';
+import Wishlist from './Components/Wishlist';
+import Orderview from './Components/Orderview';
+import Changename from './Components/Changename';
+import Editaddress from './Components/Editaddress';
+import Login from './Components/Login';
+
 
 
 const App = () => {
@@ -41,7 +48,12 @@ const App = () => {
         <Route path="/category" element={<Category />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/register" element={<Register/>} />
-       
+        <Route path='/cartpayment' element={<Cartpayment/>}/>
+        <Route path="/wishlist" element={<Wishlist/>} />
+        <Route path="/orderview" element={<Orderview />} />
+        <Route path='/changename' element={<Changename/>}/>
+        <Route path='/editaddress' element={<Editaddress/>}/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
       <Footer/>
     </Router>
