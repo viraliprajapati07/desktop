@@ -1,22 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import LinkFile from './LinkFile/LinkFile'
 
 function MyAccount() {
   return (
    <>
    <section class="middle-content">
-		<div class="cs-breadcrumb comm-mob-sec">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<ul>
-							<li><Link to='/Home'>Home</Link></li>
-							<li>Profile</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+		<LinkFile li ="Profile"/>
+		
 		<div class="main-profile-sec">
 			<div class="profile-sec-inner">
 				<div class="container">
@@ -46,7 +37,7 @@ function MyAccount() {
 							</Link>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6 col-12 mpsi-col">
-							<Link to = "/addresses" class="mpsi-link">
+							<Link to = "/address" class="mpsi-link">
 								<div class="profile-sec-innerdata">
 									<div class="mpsi-leftbar"><img src="assets/images/address-icon.png" alt="icon"/></div>
 									<div class="mpsi-rightbar"><h4>Your Addresses</h4><p>Edit address for your order</p></div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import ContectBox from './Contact/ContectBox'
 
 function Footer() {
   return (
@@ -16,30 +17,10 @@ function Footer() {
 				<div className="row">
 					<div className="col-12">
 						<div className="mf-contactdata">
-							<div className="mfc-flex">
-								<div className="mfc-flexdata">
-									<h3>office number</h3>
-									<h4><a href="javascript:void(0)">6667388</a></h4>
-								</div>
-							</div>
-							<div className="mfc-flex">
-								<div className="mfc-flexdata">
-									<h3>office number</h3>
-									<h4><a href="javascript:void(0)">6667388</a></h4>
-								</div>
-							</div>
-							<div className="mfc-flex">
-								<div className="mfc-flexdata">
-									<h3>office number</h3>
-									<h4><a href="javascript:void(0)">6667388</a></h4>
-								</div>
-							</div>
-							<div className="mfc-flex">
-								<div className="mfc-flexdata">
-									<h3>office number</h3>
-									<h4><a href="javascript:void(0)">6667388</a></h4>
-								</div>
-							</div>
+							<ContectBox/>
+							<ContectBox/>
+							<ContectBox/>
+							<ContectBox/>
 						</div>
 						<div className="mfc-saperator">
 							<div className="mfc-saperator-line"></div>

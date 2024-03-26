@@ -1,23 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import LinkFile from './LinkFile/LinkFile'
+
 
 
 function Orderview() {
   return (
     <>
     <section className="middle-content">
-		<div className="cs-breadcrumb comm-mob-sec">
-			<div className="container">
-				<div className="row">
-					<div className="col-12">
-						<ul>
-							<li><Link to= "/home">Home</Link></li>
-							<li>Order View</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+	<LinkFile li="Order View"/>
+		
 		<div className="wishlist-sec order-viewsec">
 			<div className="container">
 				<div className="row">

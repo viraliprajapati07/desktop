@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import Card from './Product/Card';
+import CategoryBox from './Category/CategoryBox';
+import InfluencerBox from './Influencers/InfluencerBox';
 
 const Home = () => {
 	const [index, setIndex] = useState(0);
 
 	const handleSelect = (selectedIndex) => {
-		setIndex(selectedIndex);	
+		setIndex(selectedIndex);
 	};
 
 	useEffect(() => {
@@ -22,7 +23,6 @@ const Home = () => {
 	const handleRadioChange = (selectedIndex) => {
 		setIndex(selectedIndex);
 	};
-	
 
 	return (
 		<>
@@ -83,14 +83,8 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			{/* <!-- end mobile sidebar --> */}
-
-			<div className="wrapper">
-				{/* 
-	
-	
-{/* <!-- start middle content --> */}
-				<section className="middle-content">
+  <div className="wrapper">
+			<section className="middle-content">
 					<div className="banner">
 						<div className="swiper banner-inner banner-carousel swiper-initialized swiper-horizontal swiper-free-mode swiper-backface-hidden">
 							<div className="carousel-container" style={{ position: "relative" }}>
@@ -120,6 +114,8 @@ const Home = () => {
 											</div>
 										</Carousel.Caption>
 									</Carousel.Item>
+									
+									
 									<Carousel.Item>
 										<img
 											className="d-block w-100"
@@ -188,79 +184,7 @@ const Home = () => {
 							<div className="swiper-pagination"></div>
 						</div>
 					</div>
-					<div className="influencers product-slider comm-desk-sec">
-						<div className="container">
-							<div className="row">
-								<div className="col-12">
-									<div className="product-main-title common-main-title">
-										<h2>Influencers</h2>
-									</div>
-								</div>
-							</div>
-							<div className="swiper product-common-swiper influencers-sliding">
-								<div className="common-slick-slide swiper-wrapper">
-									<div className="swiper-slide influencers-boxcol">
-										<Link to="/influencers" className="influencers-link">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-1.png" alt="influencers image" />
-											</div>
-										</Link>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-2.png" alt="influencers image" />
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-3.png" alt="influencers image" />
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-4.png" alt="influencers image" />
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-5.png" alt="influencers image" />
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-5.png" alt="influencers image" />
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-5.png" alt="influencers image" />
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-5.png" alt="influencers image" />
-											</div>
-										</a>
-									</div>
-								</div>
-								<div className="swiper-button-prev common-swipercontrol-btn"></div>
-								<div className="swiper-button-next common-swipercontrol-btn"></div>
-							</div>
-						</div>
-					</div>
+				
 					<div className="best-seller product-slider comm-mob-sec">
 						<div className="container">
 							<div className="row">
@@ -274,28 +198,22 @@ const Home = () => {
 							<div className="swiper product-sliding product-common-swiper">
 								<div className="row common-slick-slide swiper-wrapper">
 
-								<Card name="products" Name="Structure material" Image='assets/images/pro-1.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel ="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD"/>
-                       
-					            <Card name="products" Name="Structure material" Image='assets/images/pro-2.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel ="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD"/>
-                             
-							    <Card name="products" Name="Structure material" Image='assets/images/pro-3.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel ="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD"/>
-									
-								<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel ="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD"/>	
-									
-								<Card name="products" Name="Structure material" Image='assets/images/pro-5.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel ="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD"/>	
+									<Card name="products" Name="Structure material" Image='assets/images/pro-1.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
+
+									<Card name="products" Name="Structure material" Image='assets/images/pro-2.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
+
+									<Card name="products" Name="Structure material" Image='assets/images/pro-3.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
+
+									<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
+
+									<Card name="products" Name="Structure material" Image='assets/images/pro-5.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
 								</div>
 								<div className="swiper-button-prev common-swipercontrol-btn"></div>
 								<div className="swiper-button-next common-swipercontrol-btn"></div>
 							</div>
 						</div>
 					</div>
-					<div className="container comm-mob-sec">
-						<div className="row">
-							<div className="col-12">
-								<div className="product-separator"></div>
-							</div>
-						</div>
-					</div>
+					
 					<div className="new-product product-slider comm-mob-sec">
 						<div className="container">
 							<div className="row">
@@ -308,46 +226,26 @@ const Home = () => {
 							</div>
 							<div className="swiper product-sliding product-common-swiper">
 								<div className="row common-slick-slide swiper-wrapper">
-								
-								<Card name="products" Name="Structure material" Image='assets/images/pro-5.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel ="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD"/>
 
+									<Card name="products" Name="Structure material" Image='assets/images/pro-5.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
+
+
+									<Card name="products" Name="Structure material" Image='assets/images/pro-6.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
+
+									<Card name="products" Name="Structure material" Image='assets/images/pro-7.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
 									
-                                <Card name="products" Name="Structure material" Image='assets/images/pro-6.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel ="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD"/>
+									<Card name="products" Name="Structure material" Image='assets/images/pro-8.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
 
-								<Card name="products" Name="Structure material" Image='assets/images/pro-7.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel ="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD"/>
 
-									
-                                <Card name="products" Name="Structure material" Image='assets/images/pro-8.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel ="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD"/>
-
-									
 								</div>
 								<div className="swiper-button-prev common-swipercontrol-btn"></div>
 								<div className="swiper-button-next common-swipercontrol-btn"></div>
 							</div>
 						</div>
 					</div>
-					<div className="container comm-mob-sec">
-						<div className="row">
-							<div className="col-12">
-								<div className="product-separator"></div>
-							</div>
-						</div>
-					</div>
+
 					<div className="mob-shoptabs">
-						<div className="mob-shoptabs-inner comm-desk-sec">
-							<ul className="nav nav-tabs" id="myTab" role="tablist">
-								<li className="nav-item">
-									<a className="nav-link active" id="mob_shopbycat-tab" data-toggle="tab" href="#mob_shopbycat" role="tab" aria-controls="mob_shopbycat" aria-selected="true">
-										CONSTRUCTION MATERIALS STEP WISE
-									</a>
-								</li>
-								<li className="nav-item">
-									<a className="nav-link" id="mob_stepcons-tab" data-toggle="tab" href="#mob_stepcons" role="tab" aria-controls="mob_stepcons" aria-selected="false">
-										CATEGORIES
-									</a>
-								</li>
-							</ul>
-						</div>
+
 						<div className="tab-content" id="myTabContent">
 							<div className="tab-pane fade show active" id="mob_shopbycat" role="tabpanel" aria-labelledby="mob_shopbycat-tab">
 								<div className="shopbycat">
@@ -360,162 +258,22 @@ const Home = () => {
 											</div>
 										</div>
 										<div className="row">
-											<div className="col-lg-6 col-md-6 col-sm-12 col-12 cm-col-100">
-												<div className="home-catname">
-													<Link to="/categorlist">
-														<div className="home-catimg">
-															<img src="assets/images/cat-back-1.png" alt="category image" />
-															<h4>MATRIAL</h4>
-														</div>
-													</Link>
-												</div>
-											</div>
-											<div className="col-lg-6 col-md-6 col-sm-12 col-12 cm-col-100">
-												<div className="home-catname">
-													<Link to="/categorlist">
-														<div className="home-catimg">
-															<img src="assets/images/cat-back-2.png" alt="category image" />
-															<h4>TOOLS</h4>
-														</div>
-													</Link>
-												</div>
-											</div>
-											<div className="col-lg-6 col-md-6 col-sm-12 col-12 cm-col-100">
-												<div className="home-catname">
-													<Link to="/categorlist">
-														<div className="home-catimg">
-															<img src="assets/images/cat-back-3.png" alt="category image" />
-															<h4>ASMENT</h4>
-														</div>
-													</Link>
-												</div>
-											</div>
-											<div className="col-lg-6 col-md-6 col-sm-12 col-12 cm-col-100">
-												<div className="home-catname">
-													<Link to="/categorlist">
-														<div className="home-catimg">
-															<img src="assets/images/cat-back-4.png" alt="category image" />
-															<h4>WOOD</h4>
-														</div>
-													</Link>
-												</div>
-											</div>
+											<CategoryBox img="assets/images/cat-back-1.png" h4="MATRIAL" />
+
+											<CategoryBox img="assets/images/cat-back-2.png" h4="Tools" />
+
+											<CategoryBox img="assets/images/cat-back-3.png" h4="ASMENT" />
+
+											<CategoryBox img="assets/images/cat-back-4.png" h4="WOOD" />
+
 										</div>
 									</div>
 								</div>
 							</div>
-							<div className="tab-pane fade" id="mob_stepcons" role="tabpanel" aria-labelledby="mob_stepcons-tab">
-								<div className="shopbycat stepwise-construction">
-									<div className="container">
-										<div className="row comm-mob-sec">
-											<div className="col-12">
-												<div className="common-main-title">
-													<h2 className="text-center">Construction Materials <br />Step wise</h2>
-												</div>
-											</div>
-										</div>
-										<div className="row">
-											<div className="col-12">
-												<div className="swc-boxflex">
-													<div className="swc-boxflex-inner">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-1.png" alt="stepwise construction icon" />
-														</div>
-														<h5>SITE PREPARATION</h5>
-													</div>
-													<div className="swc-boxflex-inner">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-2.png" alt="stepwise construction icon" />
-														</div>
-														<h5>EXCAVATION <br />& FOUNDATION</h5>
-													</div>
-													<div className="swc-boxflex-inner">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-3.png" alt="stepwise construction icon" />
-														</div>
-														<h5>WATERPROOF <br />& INSULATION</h5>
-													</div>
-													<div className="swc-boxflex-inner">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-4.png" alt="stepwise construction icon" />
-														</div>
-														<h5>CONCRETE STRUCTURE</h5>
-													</div>
-													<div className="swc-boxflex-inner">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-5.png" alt="stepwise construction icon" />
-														</div>
-														<h5>BLOCK <br />& ACCESSORIES</h5>
-													</div>
-													<div className="swc-boxflex-inner comm-desk-sec">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-6.png" alt="stepwise construction icon" />
-														</div>
-														<h5>REPAIR <br />& SPECIALTIES</h5>
-													</div>
-													<div className="swc-boxflex-inner comm-desk-sec">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-7.png" alt="stepwise construction icon" />
-														</div>
-														<h5>FINISHING WORKS</h5>
-													</div>
-													<div className="swc-boxflex-inner comm-desk-sec">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-8.png" alt="stepwise construction icon" />
-														</div>
-														<h5>MISCELLANEOUS TOOLS</h5>
-													</div>
-													<div className="swc-boxflex-inner comm-desk-sec">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-9.png" alt="stepwise construction icon" />
-														</div>
-														<h5>PLASTER <br />& ACCESSORIES</h5>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div className="row comm-mob-sec">
-											<div className="col-12">
-												<div className="swc-boxflex swc-boxflex-two">
-													<div className="swc-boxflex-inner">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-6.png" alt="stepwise construction icon" />
-														</div>
-														<h5>REPAIR <br />& SPECIALTIES</h5>
-													</div>
-													<div className="swc-boxflex-inner">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-7.png" alt="stepwise construction icon" />
-														</div>
-														<h5>FINISHING WORKS</h5>
-													</div>
-													<div className="swc-boxflex-inner">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-8.png" alt="stepwise construction icon" />
-														</div>
-														<h5>MISCELLANEOUS TOOLS</h5>
-													</div>
-													<div className="swc-boxflex-inner">
-														<div className="swc-boxflex-img">
-															<img src="assets/images/swc-9.png" alt="stepwise construction icon" />
-														</div>
-														<h5>PLASTER <br />& ACCESSORIES</h5>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+
 						</div>
 					</div>
-					<div className="container comm-mob-sec">
-						<div className="row">
-							<div className="col-12">
-								<div className="product-separator"></div>
-							</div>
-						</div>
-					</div>
+				
 					<div className="influencers product-slider comm-mob-sec">
 						<div className="container">
 							<div className="row">
@@ -528,86 +286,23 @@ const Home = () => {
 							</div>
 							<div className="swiper product-common-swiper influencers-sliding">
 								<div className="common-slick-slide swiper-wrapper">
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html" className="influencers-link">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-1.png" alt="influencers image" />
-											</div>
-											<div className="influencers-name">
-												<h4>Influencers</h4>
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-2.png" alt="influencers image" />
-											</div>
-											<div className="influencers-name">
-												<h4>Influencers</h4>
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-3.png" alt="influencers image" />
-											</div>
-											<div className="influencers-name">
-												<h4>Influencers</h4>
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-4.png" alt="influencers image" />
-											</div>
-											<div className="influencers-name">
-												<h4>Influencers</h4>
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-5.png" alt="influencers image" />
-											</div>
-											<div className="influencers-name">
-												<h4>Influencers</h4>
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-1.png" alt="influencers image" />
-											</div>
-											<div className="influencers-name">
-												<h4>Influencers</h4>
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-2.png" alt="influencers image" />
-											</div>
-											<div className="influencers-name">
-												<h4>Influencers</h4>
-											</div>
-										</a>
-									</div>
-									<div className="swiper-slide influencers-boxcol">
-										<a href="influencers.html">
-											<div className="influencers-img">
-												<img src="assets/images/influencers-3.png" alt="influencers image" />
-											</div>
-											<div className="influencers-name">
-												<h4>Influencers</h4>
-											</div>
-										</a>
-									</div>
+
+									<InfluencerBox img="assets/images/influencers-1.png" alt="influencers image" />
+
+									<InfluencerBox img="assets/images/influencers-2.png" alt="influencers image" />
+
+									<InfluencerBox img="assets/images/influencers-3.png" alt="influencers image" />
+
+									<InfluencerBox img="assets/images/influencers-4.png" alt="influencers image" />
+
+									<InfluencerBox img="assets/images/influencers-5.png" alt="influencers image" />
+
+									<InfluencerBox img="assets/images/influencers-1.png" alt="influencers image" />
+
+									<InfluencerBox img="assets/images/influencers-2.png" alt="influencers image" />
+
+									<InfluencerBox img="assets/images/influencers-3.png" alt="influencers image" />
+
 								</div>
 								<div className="swiper-button-prev common-swipercontrol-btn"></div>
 								<div className="swiper-button-next common-swipercontrol-btn"></div>
@@ -616,44 +311,9 @@ const Home = () => {
 					</div>
 				</section>
 
-
-
-
-				<div className="comm-msg-modal" id="missing_item_modal">
-					<div className="modl-inner">
-						<div className="modl-header">
-							<h3>Alert</h3>
-						</div>
-						<div className="modl-body">
-							<h4>Missing items</h4>
-							<div className="modl-body-btns">
-								<button type="button" className="btn" id="missing_item_popbtn">Ok</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div className="comm-msg-modal" id="missing_item_confmodal">
-					<div className="modl-inner">
-						<div className="modl-header">
-							<h3>Alert</h3>
-						</div>
-						<div className="modl-body">
-							<h4>Are you sure!</h4>
-							<div className="modl-body-btns d-flex justify-content-between">
-								<button type="button" className="btn" id="missing_item_confpopbtnY">Yes</button>
-								<button type="button" className="btn" id="missing_item_confpopbtnN">No</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
 			</div>
 		</>
 	)
 }
-
-
 export default Home;
 
-	

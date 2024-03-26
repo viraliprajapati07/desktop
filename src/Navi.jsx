@@ -8,22 +8,22 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Feedback from './Components/Feedback';
 import Category from './Components/Category';
-import Categorlist from './Components/Categorlist';
-import Orderlist from './Components/Orderlist';
+import Categorlist from './Components/CategorList';
+import Orderlist from './Components/OrderList';
 import Profileinfo from './Components/Profileinfo';
-import Addresses from './Components/Addresses';
+import Addresses from './Components/Address';
 import Footer from './Components/Footer';
-import Changepassword from './Components/Changepassword';
+import Changepassword from './Components/ChangePassword';
 import Cart from './Components/Cart';
 import Registration from './Components/Registration';
 import Register from './Components/Register';
-import Cartpayment from './Components/Cartpayment';
+import Cartpayment from './Components/CartPayment';
 import Wishlist from './Components/Wishlist';
-import Orderview from './Components/Orderview';
-import Changename from './Components/Changename';
-import Editaddress from './Components/Editaddress';
+import Orderview from './Components/OrderView';
+import Changename from './Components/ChangeName';
+import Editaddress from './Components/EditAddress';
 import Login from './Components/Login';
-import Productview from './Components/Productview';
+import Productview from './Components/ProductView';
 
 
 

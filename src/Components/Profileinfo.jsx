@@ -1,23 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import LinkFile from './LinkFile/LinkFile'
 
 function Profileinfo() {
   return (
    <>
    <section className="middle-content">
-		<div className="cs-breadcrumb comm-mob-sec">
-			<div className="container">
-				<div className="row">
-					<div className="col-12">
-						<ul>
-							<li><Link to = "/home">Home</Link></li>
-							<li><Link to = "/profile">Profile</Link></li>
-							<li>Profile Info</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+	    <Link to = "/profile">
+		<LinkFile li="Profile" li2='Profile-info' />
+		</Link>
 		<div className="main-profile-sec">
 			<div className="profile-sec-inner">
 				<div className="container">
