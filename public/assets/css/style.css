@@ -9,14 +9,14 @@
 
 /*====================== 2. Basic ========================*/
 
-/* .slider-img{
-    width: 186px !important;
-    height: 86px;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    margin-right: 15px;
-} */
+
+
+.auto-slider{
+    position: 'relative';
+     width: '100%';
+     overflow: 'hidden';
+}
+
 .h1 {
     color: #fff;
     text-transform: uppercase;
@@ -1229,10 +1229,7 @@ a.influencers-link{
     height: 100%;
     width: 100%;
 }
-.catg-sliderbox .catg-img img {
-    height: 100%;
-    width: 100%;
-}
+
 .catg-sliderbox h5 {
     color: #fff;
     margin: 0;
