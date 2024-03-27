@@ -42,7 +42,7 @@ function Cart() {
 										<label>Use Credit:<br /><span className="vailablility-credit-count m-0"><span className="m-0">Available Credit:</span> <b>4.00 Kd</b></span></label>
 										<span className="credit-span"><input type="number" placeholder="Enter Credit" className="form-control" name="credit-use" /> <span>kd</span></span>
 									</div>
-									<div className="cart-viewtotals-inner cvi-bott">
+									<div className="cart-viewtotals-inner cvi-bott " >
 										<label>Total:</label>
 										<span>12.00 kd</span>
 									</div>
@@ -59,7 +59,7 @@ function Cart() {
 											<button type="button" className="btn login-btn" id="cart_continue_shopbtn">Continue Shopping</button>
 										</Link>
 										<Link to="/registration">
-											<button type="button" className="btn login-btn" id="cart_nextbtn" style={{marginLeft :"8%"}}>Next</button>
+											<button type="button" className="btn login-btn" id="cart_nextbtn" style={{ marginLeft: "8%" }}>Next</button>
 										</Link>
 									</div>
 								</div>
@@ -86,11 +86,15 @@ function Cart() {
 						</div>
 						<div className="swiper product-sliding product-common-swiper">
 							<div className="row common-slick-slide swiper-wrapper">
-								<Card name="products" Name="Structure material" Image='assets/images/pro-1.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
-								<Card name="products" Name="Structure material" Image='assets/images/pro-2.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
-								<Card name="products" Name="Structure material" Image='assets/images/pro-3.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
-								<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
-								<Card name="products" Name="Structure material" Image='assets/images/pro-5.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" KD="KD" KDSpan="12.00 KD" />
+								<Card name="products" Name="Structure material" Image='assets/images/pro-1.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
+
+								<Card name="products" Name="Structure material" Image='assets/images/pro-2.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
+
+								<Card name="products" Name="Structure material" Image='assets/images/pro-3.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
+
+								<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
+
+								<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
 							</div>
 							<div className="swiper-button-prev common-swipercontrol-btn"></div>
 							<div className="swiper-button-next common-swipercontrol-btn"></div>

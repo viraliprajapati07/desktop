@@ -1560,7 +1560,7 @@ a.influencers-link{
     line-height: 16px;
 }
 .cart-view .proview-right .price-amountinner span {
-    font-size: 28px;
+    font-size: 25px;
     line-height: 30px;
 }
 .cart-view .proview-right .price-amountinner span.price-discount {
@@ -1590,7 +1590,7 @@ a.influencers-link{
 .cart-viewtotals-inner label {
     color: #474455;
     font-family: 'hn-md';
-    font-size: 32px;
+    font-size: 28px;
     line-height: 36px;
     margin: 0;
 }
@@ -1627,7 +1627,7 @@ a.influencers-link{
     padding-left: 50px;
 }
 .cart-viewtotals-inner.cvi-bott label, .cart-viewtotals-inner.cvi-bott span {
-    font-size: 49px;
+    font-size: 35px;
     line-height: 53px;
     font-family: 'hn-bold';
 }

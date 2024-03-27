@@ -1,24 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import LinkFile from './LinkFile/LinkFile';
+import QuantityButton from './Cart/QuantityButton';
+import KD from './Price/KD';
+import Card from './Product/Card';
 
 function Productview() {
   return (
    <>
    <section className="middle-content">
-		<div className="cs-breadcrumb">
-			<div className="container">
-				<div className="row">
-					<div className="col-12">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="category.html">Product</a></li>
-							<li>Product Name</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+   <Link to = "/category">
+		<LinkFile li="Product" li2='Product Name' />
+		</Link>
 		<div className="product-view  main-productview">
 			<div className="container">
 				<div className="row">
@@ -106,16 +99,12 @@ function Productview() {
 										<div className="product-pricedata">
 											<div className="ppd-flex">
 												<div className="pro-quantity">
-													<div className="quantity">
-														<button type="button" className="quantity-minus">-</button>	
-															<input type="number" id="quantity_count" className="input-text qty" step="1" min="0" max="99" name="qty-count" value="1" title="" size="4" placeholder="" inputmode="numeric"/>
-														<button type="button" className="quantity-plus">+</button>	
-													</div>
+													<QuantityButton/>
 												</div>
 												<div className="price-amount">
 													<div className="price-amountinner">
-														<span className="price-discount"><del>12.00</del> KD</span>
-														<span>12.00 KD</span>
+														<span className="price-discount"><del>12.00</del><KD/></span>
+														<span>12.00<KD/></span>
 													</div>
 												</div>
 											</div>
@@ -184,246 +173,15 @@ function Productview() {
 				</div>
 				<div className="swiper product-sliding main-related-product product-common-swiper">
 					<div className="row common-slick-slide swiper-wrapper">
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
-							<div className="product-box">
-								<div className="product-img text-center">
-									<img src="assets/images/pro-1.png" alt="product image"/>
-								</div>
-								<div className="product-data">
-									<h4><a href="javascript:void(0)">Structure material</a></h4>
-									<div className="product-varient">
-										<div className="product-varient-inner">
-											<label>Suppler:</label>
-											<div className="pvi-flex">
-												<p>Hempel</p>
-											</div>
-										</div>
-										<div className="product-varient-inner pvi-weight">
-											<label>Weight:</label>
-											<div className="pvi-flex">
-												<span>1x50 ML</span>
-												<span>1x50 ML</span>
-												<span>1x50 ML</span>
-											</div>
-										</div>
-										<div className="product-varient-inner">
-											<label>Unit Type:</label>
-											<div className="pvi-flex">
-												<p>Piece</p>
-											</div>
-										</div>
-									</div>
-									<div className="product-pricedata">
-										<div className="ppd-flex">
-											<button type="button" className="btn add-cartBtn" id="add_cartBtn">
-												<img src="assets/images/add-cart.png" alt="add cart icon"/>
-											</button>
-											<button type="button" className="btn add-favBtn" id="add_favBtn">
-												 <i className="fa fa-star-o" aria-hidden="true"></i>
-											</button>
-											<div className="price-amount">
-												<div className="price-amountinner">
-													<span className="price-discount"><del>12.00</del> KD</span>
-													<span>12.00 KD</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
-							<div className="product-box">
-								<div className="product-img text-center">
-									<img src="assets/images/pro-2.png" alt="product image"/>
-								</div>
-								<div className="product-data">
-									<h4><a href="javascript:void(0)">Structure material</a></h4>
-									<div className="product-varient">
-										<div className="product-varient-inner">
-											<label>Suppler:</label>
-											<div className="pvi-flex">
-												<p>Hempel</p>
-											</div>
-										</div>
-										<div className="product-varient-inner pvi-weight">
-											<label>Weight:</label>
-											<div className="pvi-flex">
-												<span>1x50 ML</span>
-												<span>1x50 ML</span>
-												<span>1x50 ML</span>
-											</div>
-										</div>
-										<div className="product-varient-inner">
-											<label>Unit Type:</label>
-											<div className="pvi-flex">
-												<p>Piece</p>
-											</div>
-										</div>
-									</div>
-									<div className="product-pricedata">
-										<div className="ppd-flex">
-											<button type="button" className="btn add-cartBtn" id="add_cartBtn">
-												<img src="assets/images/add-cart.png" alt="add cart icon"/>
-											</button>
-											<button type="button" className="btn add-favBtn" id="add_favBtn">
-												 <i className="fa fa-star-o" aria-hidden="true"></i>
-											</button>
-											<div className="price-amount">
-												<div className="price-amountinner">
-													<span className="price-discount"><del>12.00</del> KD</span>
-													<span>12.00 KD</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
-							<div className="product-box">
-								<div className="product-img text-center">
-									<img src="assets/images/pro-3.png" alt="product image"/>
-								</div>
-								<div className="product-data">
-									<h4><a href="javascript:void(0)">Structure material</a></h4>
-									<div className="product-varient">
-										<div className="product-varient-inner">
-											<label>Suppler:</label>
-											<div className="pvi-flex">
-												<p>Hempel</p>
-											</div>
-										</div>
-										<div className="product-varient-inner pvi-weight">
-											<label>Weight:</label>
-											<div className="pvi-flex">
-												<span>1x50 ML</span>
-												<span>1x50 ML</span>
-												<span>1x50 ML</span>
-											</div>
-										</div>
-										<div className="product-varient-inner">
-											<label>Unit Type:</label>
-											<div className="pvi-flex">
-												<p>Piece</p>
-											</div>
-										</div>
-									</div>
-									<div className="product-pricedata">
-										<div className="ppd-flex">
-											<button type="button" className="btn add-cartBtn" id="add_cartBtn">
-												<img src="assets/images/add-cart.png" alt="add cart icon"/>
-											</button>
-											<button type="button" className="btn add-favBtn" id="add_favBtn">
-												 <i className="fa fa-star-o" aria-hidden="true"></i>
-											</button>
-											<div className="price-amount">
-												<div className="price-amountinner">
-													<span className="price-discount"><del>12.00</del> KD</span>
-													<span>12.00 KD</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
-							<div className="product-box">
-								<div className="product-img text-center">
-									<img src="assets/images/pro-4.png" alt="product image"/>
-								</div>
-								<div className="product-data">
-									<h4><a href="javascript:void(0)">Structure material</a></h4>
-									<div className="product-varient">
-										<div className="product-varient-inner">
-											<label>Suppler:</label>
-											<div className="pvi-flex">
-												<p>Hempel</p>
-											</div>
-										</div>
-										<div className="product-varient-inner pvi-weight">
-											<label>Weight:</label>
-											<div className="pvi-flex">
-												<span>1x50 ML</span>
-												<span>1x50 ML</span>
-												<span>1x50 ML</span>
-											</div>
-										</div>
-										<div className="product-varient-inner">
-											<label>Unit Type:</label>
-											<div className="pvi-flex">
-												<p>Piece</p>
-											</div>
-										</div>
-									</div>
-									<div className="product-pricedata">
-										<div className="ppd-flex">
-											<button type="button" className="btn add-cartBtn" id="add_cartBtn">
-												<img src="assets/images/add-cart.png" alt="add cart icon"/>
-											</button>
-											<button type="button" className="btn add-favBtn" id="add_favBtn">
-												 <i className="fa fa-star-o" aria-hidden="true"></i>
-											</button>
-											<div className="price-amount">
-												<div className="price-amountinner">
-													<span className="price-discount"><del>12.00</del> KD</span>
-													<span>12.00 KD</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="col-lg-3 col-md-3 col-sm-6 col-12 swiper-slide product-boxcol product-boxitem">
-							<div className="product-box">
-								<div className="product-img text-center">
-									<img src="assets/images/pro-4.png" alt="product image"/>
-								</div>
-								<div className="product-data">
-									<h4><a href="javascript:void(0)">Structure material</a></h4>
-									<div className="product-varient">
-										<div className="product-varient-inner">
-											<label>Suppler:</label>
-											<div className="pvi-flex">
-												<p>Hempel</p>
-											</div>
-										</div>
-										<div className="product-varient-inner pvi-weight">
-											<label>Weight:</label>
-											<div className="pvi-flex">
-												<span>1x50 ML</span>
-												<span>1x50 ML</span>
-												<span>1x50 ML</span>
-											</div>
-										</div>
-										<div className="product-varient-inner">
-											<label>Unit Type:</label>
-											<div className="pvi-flex">
-												<p>Piece</p>
-											</div>
-										</div>
-									</div>
-									<div className="product-pricedata">
-										<div className="ppd-flex">
-											<button type="button" className="btn add-cartBtn" id="add_cartBtn">
-												<img src="assets/images/add-cart.png" alt="add cart icon"/>
-											</button>
-											<button type="button" className="btn add-favBtn" id="add_favBtn">
-												 <i className="fa fa-star-o" aria-hidden="true"></i>
-											</button>
-											<div className="price-amount">
-												<div className="price-amountinner">
-													<span className="price-discount"><del>12.00</del> KD</span>
-													<span>12.00 KD</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+					<Card name="products" Name="Structure material" Image='assets/images/pro-1.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00"  Price="12.00 " />
+
+<Card name="products" Name="Structure material" Image='assets/images/pro-2.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00"  Price="12.00 " />
+
+<Card name="products" Name="Structure material" Image='assets/images/pro-3.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
+
+<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
+
+<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
 					</div>
 					<div className="swiper-button-prev common-swipercontrol-btn"></div>
 		   		    <div className="swiper-button-next common-swipercontrol-btn"></div>
@@ -436,3 +194,4 @@ function Productview() {
 }
 
 export default Productview
+

@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link  } from 'react-router-dom';
+import KD from '../Price/KD';
+
 function Card(props) {
   return (
   
@@ -47,8 +49,8 @@ function Card(props) {
                     <div className="price-amount">
                         <div className="price-amountinner">
                             <span className="price-discount">
-                                <del>{props.Del}</del> {props.KD}</span>
-                            <span>{props.KDSpan}</span>
+                                <del>{props.Del}</del> <KD/></span>
+                            <span>{props.Price}<KD/></span>
                         </div>
                     </div>
                 </div>
