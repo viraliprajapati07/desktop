@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Card from './Product/Card';
 import LinkFile from './LinkFile/LinkFile';
 import CartBox from './Cart/CartBox';
+import KD from './Price/KD';
 
 function Cart() {
 	return (
@@ -23,28 +24,30 @@ function Cart() {
 						<div className="row">
 							<div className="col-12">
 								<div className="proview-top">
-									<CartBox />
-									<CartBox />
-									<CartBox />
+									<CartBox  Name="Structure material" Image='assets/images/pro-1.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece"  Del="12.00" Price="12.00 " />
+
+									<CartBox  Name="Structure material" Image='assets/images/pro-1.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece"  Del="12.00" Price="12.00 " />
+
+									<CartBox  Name="Structure material" Image='assets/images/pro-1.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece"  Del="12.00" Price="12.00 " />
 								</div>
 							</div>
 							<div className="col-12">
 								<div className="cart-viewtotals">
 									<div className="cart-viewtotals-inner">
 										<label>Subtotal:</label>
-										<span>12.00 kd</span>
+										<span>12.00 <KD/></span>
 									</div>
 									<div className="cart-viewtotals-inner cvi-noborder">
 										<label>Delivery Charge:</label>
-										<span>12.00 kd</span>
+										<span>12.00 <KD/></span>
 									</div>
 									<div className="cart-viewtotals-inner cvi-noborder use-credit-fields">
-										<label>Use Credit:<br /><span className="vailablility-credit-count m-0"><span className="m-0">Available Credit:</span> <b>4.00 Kd</b></span></label>
-										<span className="credit-span"><input type="number" placeholder="Enter Credit" className="form-control" name="credit-use" /> <span>kd</span></span>
+										<label>Use Credit:<br /><span className="vailablility-credit-count m-0"><span className="m-0">Available Credit:</span> <b>4.00 <KD/></b></span></label>
+										<span className="credit-span"><input type="number" placeholder="Enter Credit" className="form-control" name="credit-use" /> <span><KD/></span></span>
 									</div>
 									<div className="cart-viewtotals-inner cvi-bott " >
 										<label>Total:</label>
-										<span>12.00 kd</span>
+										<span>12.00 <KD/></span>
 									</div>
 								</div>
 							</div>

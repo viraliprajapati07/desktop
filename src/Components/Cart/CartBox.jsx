@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
+import KD from '../Price/KD'
 import QuantityButton from './QuantityButton'
 
 
-function CartBox() {
+
+function CartBox(props) {
   
     return (
         <div className="proview-flex cpf-flex">
             <div className="proview-left">
                 <div className="cart-viewimg">
                     <a href="javascript:void(0)">
-                        <img src="assets/images/pro-1.png" alt="product image" />
+                        <img src={props.Image} alt="product image" />
                     </a>
                 </div>
                 <button type="button" className="pro-delete-btn btn" id="pro_delete_btn">
@@ -18,39 +19,39 @@ function CartBox() {
             </div>
             <div className="proview-right">
                 <div className="product-data">
-                    <h4><a href="product-view.html" tabindex="0">Structure material</a></h4>
+                    <h4><a href="product-view.html" tabindex="0">{props.Name}</a></h4>
                     <div className="product-varient mb-0">
                         <div className="product-varient-inner">
-                            <label>Suppler:</label>
+                            <label>{props. InnerLabel}</label>
                             <div className="pvi-flex">
-                                <p>Hempel</p>
+                                <p>{props.P}</p>
                             </div>
                         </div>
                         <div className="cartv-flex">
                             <div className="product-varient-inner pvi-weight">
-                                <label>Weight:</label>
+                                <label>{props.L}</label>
                                 <div className="pvi-flex">
-                                    <span>1x50 ML</span>
-                                    <span>1x50 ML</span>
-                                    <span>1x50 ML</span>
+                                    <span>{props.Span}</span>
+                                    <span>{props.Span}</span>
+                                    <span>{props.Span}</span>
                                 </div>
                             </div>
                             <div className="product-varient-inner">
-                                <label>Unit Type:</label>
+                                <label>{props.UnitLabel}</label>
                                 <div className="pvi-flex">
-                                    <p>Piece</p>
+                                    <p>{props.PriceP}</p>
                                 </div>
                             </div>
                             <div className="product-pricedata">
                                 <div className="ppd-flex">
                                     <div className="price-amount">
                                         <div className="price-amountinner">
-                                            <span className="price-discount"><del>12.00</del> KD</span>
-                                            <span>12.00 KD</span>
+                                            <span className="price-discount"><del>{props.Del}</del><KD/></span>
+                                            <span>{props.Price} <KD/></span>
                                         </div>
                                     </div>
                                    
-<QuantityButton/>
+                          <QuantityButton/>
                                 </div>
                             </div>
                         </div>

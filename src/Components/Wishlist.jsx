@@ -4,6 +4,7 @@ import LinkFile from './LinkFile/LinkFile'
 import InStock from './Wishlist/InStock'
 import OutOfStock from './Wishlist/OutOfStock'
 
+
 function Wishlist() {
 	return (
 		<>
@@ -35,12 +36,12 @@ function Wishlist() {
 											</tr>
 										</thead>
 										<tbody>
-										    <InStock/>
-											<OutOfStock/>
-											<InStock/>
-											<OutOfStock/>
-											<InStock/>
-											<OutOfStock/>
+										    <InStock CloseIcon="assets/images/close-icon.png" Image="assets/images/pro-1.png" Name="Structure material"DelPrice="30.00" Price="24.00"/>
+											<OutOfStock  CloseIcon="assets/images/close-icon.png" Image="assets/images/pro-1.png"Name="Structure material"DelPrice="30.00" Price="24.00"/>
+											<InStock  CloseIcon="assets/images/close-icon.png" Image="assets/images/pro-1.png"Name="Structure material" DelPrice="30.00" Price="24.00"/>
+											<OutOfStock  CloseIcon="assets/images/close-icon.png" Image="assets/images/pro-1.png"Name="Structure material"DelPrice="30.00" Price="24.00"/>
+											<InStock  CloseIcon="assets/images/close-icon.png" Image="assets/images/pro-1.png"Name="Structure material" DelPrice="30.00" Price="24.00"/>
+											<OutOfStock Name="Structure material"DelPrice="30.00" Price="24.00"/>
 										</tbody>
 									</table>
 								</div>

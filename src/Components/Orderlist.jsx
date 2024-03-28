@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import LinkFile from './LinkFile/LinkFile'
+import Completed from './OrderList/Completed'
+import Cancled from './OrderList/Cancled'
+import Processing from './OrderList/Processing'
 
 
 
@@ -40,80 +43,11 @@ function Orderlist() {
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td>
-											<button type="button" className="delete-wishlistBtn btn" id="delete_wishlistBtn">
-										     	<img src="assets/images/close-icon.png" alt="delete icon"/>
-										    </button>
-										</td>
-										<td>
-											<div className="wishlist-product-img">
-												<img src="assets/images/pro-1.png" alt="product image"/>
-											</div>
-										</td>
-										<td><h3 className="wishlist-product-name">Structure material</h3></td>
-										<td>
-											<div className="wishlist-unitprice">
-													<del>30.00 KD</del> <h5>$24.00 KD</h5>
-											</div>
-										</td>
-										<td><span className="wishlist-status-tag wishlist-in-stock">Completed</span></td>
-										<td>
-											
-											<div className="wishlist-addcartbtn">
-											<Link to="/orderview"className="orderdetail-viewLink" id="orderdetail_viewLink">View</Link>
-											</div>
-											
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<button type="button" className="delete-wishlistBtn btn" id="delete_wishlistBtn">
-										     	<img src="assets/images/close-icon.png" alt="delete icon"/>
-										    </button>
-										</td>
-										<td>
-											<div className="wishlist-product-img">
-												<img src="assets/images/pro-1.png" alt="product image"/>
-											</div>
-										</td>
-										<td><h3 className="wishlist-product-name">Structure material</h3></td>
-										<td>
-											<div className="wishlist-unitprice">
-												<del>30.00 KD</del> <h5>$24.00 KD</h5>
-											</div>
-										</td>
-										<td><span className="wishlist-status-tag wishlist-out-stock">Cancelled</span></td>
-										<td>
-											<div className="wishlist-addcartbtn">
-												<Link to="/orderview" className="orderdetail-viewLink" id="orderdetail_viewLink">View</Link>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<button type="button" className="delete-wishlistBtn btn" id="delete_wishlistBtn">
-										     	<img src="assets/images/close-icon.png" alt="delete icon"/>
-										    </button>
-										</td>
-										<td>
-											<div className="wishlist-product-img">
-												<img src="assets/images/pro-1.png" alt="product image"/>
-											</div>
-										</td>
-										<td><h3 className="wishlist-product-name">Structure material</h3></td>
-										<td>
-											<div className="wishlist-unitprice">
-												<del>30.00 KD</del> <h5>$24.00 KD</h5>
-											</div>
-										</td>
-										<td><span className="wishlist-status-tag order-processing-tag">Processing</span></td>
-										<td>
-											<div className="wishlist-addcartbtn">
-											<Link to="/orderview" className="orderdetail-viewLink" id="orderdetail_viewLink">View</Link>
-											</div>
-										</td>
-									</tr>
+									
+									<Completed CloseIcon="assets/images/close-icon.png" Image="assets/images/pro-1.png" Name="Structure material"DelPrice="30.00"Price="24.00"/>
+									<Cancled CloseIcon="assets/images/close-icon.png" Image="assets/images/pro-1.png" Name="Structure material"DelPrice="30.00"Price="24.00"/>
+									<Processing CloseIcon="assets/images/close-icon.png" Image="assets/images/pro-1.png" Name="Structure material"DelPrice="30.00"Price="24.00"/>
+									
 								</tbody>
 							</table>
 						</div>

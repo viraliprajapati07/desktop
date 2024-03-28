@@ -57,23 +57,7 @@ function Productview() {
 											</button>
 										</div>
 										<h4><a href="javascript:void(0)" tabindex="0">Structure material</a></h4>
-										<div className="pro-description mp-desc comm-desk-sec">
-											<p>
-												Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-												dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-												suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
-												vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
-												iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-												Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-												laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-												ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-												Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-												dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-												suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
-												vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
-												iusto odio dignissim qui blandit praesent luptatum zzril delenit a
-											</p>
-										</div>
+										
 										<div className="product-varient">
 											<div className="product-varient-inner">
 												<label>Suppler:</label>
@@ -185,7 +169,7 @@ function Productview() {
 					</div>
 					<div className="swiper-button-prev common-swipercontrol-btn"></div>
 		   		    <div className="swiper-button-next common-swipercontrol-btn"></div>
-				</div>
+		      		</div>
 			</div>
 		</div>
 	</section>
