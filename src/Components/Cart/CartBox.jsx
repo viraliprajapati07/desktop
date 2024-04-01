@@ -1,10 +1,21 @@
-import KD from '../Price/KD'
-import QuantityButton from './QuantityButton'
 
+import React, { useState } from 'react';
+import KD from '../Price/KD';
 
+function CartBox(props, initialQuantity) {
+   
+    const [quantity, setQuantity] = useState(Number(initialQuantity) || 1);
 
-function CartBox(props) {
-  
+    const handleIncrement = () => {
+        setQuantity(prevQuantity => prevQuantity + 1);
+    };
+
+    const handleDecrement = () => {
+        if (quantity > 0) {
+            setQuantity(prevQuantity => prevQuantity - 1);
+        }
+    };
+
     return (
         <div className="proview-flex cpf-flex">
             <div className="proview-left">
@@ -19,10 +30,10 @@ function CartBox(props) {
             </div>
             <div className="proview-right">
                 <div className="product-data">
-                    <h4><a href="product-view.html" tabindex="0">{props.Name}</a></h4>
+                    <h4><a href="product-view.html" tabIndex="0">{props.Name}</a></h4>
                     <div className="product-varient mb-0">
                         <div className="product-varient-inner">
-                            <label>{props. InnerLabel}</label>
+                            <label>{props.InnerLabel}</label>
                             <div className="pvi-flex">
                                 <p>{props.P}</p>
                             </div>
@@ -46,19 +57,33 @@ function CartBox(props) {
                                 <div className="ppd-flex">
                                     <div className="price-amount">
                                         <div className="price-amountinner">
-                                            <span className="price-discount"><del>{props.Del}</del><KD/></span>
-                                            <span>{props.Price} <KD/></span>
+                                            <span className="price-discount"><del>{props.Del}</del><KD /></span>
+                                            <span>{(props.Price * quantity).toFixed(2)} <KD /></span>
                                         </div>
                                     </div>
-                                   
-                          <QuantityButton/>
+                                    <div className="pro-quantity">
+                                        <div className="quantity">
+                                            <button type="button" className="quantity-minus" onClick={handleDecrement}>-</button>
+                                            <input type="number" className="input-text qty" value={quantity} readOnly />
+                                            <button type="button" className="quantity-plus" onClick={handleIncrement}>+</button>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
+                    
                 </div>
             </div>
+            
         </div>
-    )
+        
+    );
 }
-export default CartBox
+
+export default CartBox;
+//  /////////////////////////////////////////////////////////////////
+
+ 

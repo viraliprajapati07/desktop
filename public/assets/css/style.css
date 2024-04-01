@@ -10,7 +10,11 @@
 /*====================== 2. Basic ========================*/
 
 
-
+.Total{
+     float: right;
+     font-weight: bold;
+    
+}
 .auto-slider{
     position: 'relative';
      width: '100%';

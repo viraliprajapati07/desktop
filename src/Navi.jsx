@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { BrowserRouter as Router, Route , Routes} from 'react-router-dom';
 import Header from './Components/Header';
 import Home from './Components/Home';
@@ -27,13 +27,20 @@ import Productview from './Components/ProductView';
 
 
 
-const Navi= () => {
+const Navi = () => {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (item) => {
+    setCartItems([...cartItems, item]);
+  };
+
   return (
     <Router>
       <Header />
       
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home addToCart={addToCart} />} /> {/* Pass addToCart as a prop to the Home component */}
+        <Route path="/cart" element={<Cart cartItems={cartItems} />} />
         <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/influencers" element={<Influencers />} />
@@ -45,7 +52,7 @@ const Navi= () => {
         <Route path="/profileinfo" element={<Profileinfo />} />
         <Route path='/addresses' element={<Addresses/>}/>
         <Route path='/changepassword' element={<Changepassword/>}/>
-        <Route path='/cart' element={<Cart/>}/>
+        {/* <Route path='/cart' element={<Cart/>}/> */}
         <Route path="/category" element={<Category />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/register" element={<Register/>} />
