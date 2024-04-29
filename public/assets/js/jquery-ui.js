@@ -12784,7 +12784,7 @@ $.widget("ui.sortable", $.ui.mouse, {
 					if ( nodeName === "tr" ) {
 						that.currentItem.children().each(function() {
 							$( "<td>&#160;</td>", that.document[0] )
-								.attr( "colspan", $( this ).attr( "colspan" ) || 1 )
+								.attr( "colSpan", $( this ).attr( "colSpan" ) || 1 )
 								.appendTo( element );
 						});
 					} else if ( nodeName === "img" ) {

@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-
 function LinkFile(props) {
   return (
     <>
@@ -21,5 +19,4 @@ function LinkFile(props) {
     </>
   )
 }
-
 export default LinkFile

@@ -88,7 +88,6 @@
             interval = null,
             isTouch = ('ontouchstart' in document.documentElement);
         var refresh = {};
-
         refresh.chbreakpoint = function () {
             windowW = $(window).width();
             if (settings.responsive.length) {

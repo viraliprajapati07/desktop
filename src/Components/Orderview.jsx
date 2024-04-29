@@ -55,7 +55,7 @@ function Orderview() {
 													</td>
 												</tr>
 												<tr>
-													<td colspan="6">
+													<td colSpan="6">
 														<div className="ovd-subtotal">
 															<b>Subtotal:</b>
 														</div>
@@ -67,7 +67,7 @@ function Orderview() {
 													</td>
 												</tr>
 												<tr>
-													<td colspan="6">
+													<td colSpan="6">
 														<div className="ovd-subtotal">
 															<b>Discount:</b>
 														</div>
@@ -79,7 +79,7 @@ function Orderview() {
 													</td>
 												</tr>
 												<tr>
-													<td colspan="6">
+													<td colSpan="6">
 														<div className="ovd-subtotal">
 															<b>Total:</b>
 														</div>

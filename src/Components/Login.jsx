@@ -25,7 +25,8 @@ function Login() {
 												<input type="password" name="password" placeholder="Password" className="form-control"/>
 											</div>
 											<div className="form-group forgot-linkgroup mb-0">
-												<a href="forgot-password.html" className="forgot-passlink">Forgot Password !</a>
+												<Link to="/forgotPassword" className='forgot-passlink'>Forgot Password !</Link>
+												
 											</div>
 											<div className="common-credform-btns">
 												<div className="common-credform-loginbtns">

@@ -3,17 +3,9 @@ import { Link } from 'react-router-dom';
 import Card from './Product/Card';
 import LinkFile from './LinkFile/LinkFile';
 import CartBox from './Cart/CartBox';
-import KD from './Price/KD';
-
-function Cart({ cartItems }) {
-    const [total, setTotal] = useState(0);
-
-	useEffect(() => {
-        const totalPrice = cartItems.reduce((acc, item,total) => acc + (item.Price * item.quantity ), 0);
-		setTotal(totalPrice );
-		}, [cartItems]);
-	
-        return (
+function Cart({}) { 
+    const [total] = useState(0);
+    return (
         <>
             <section className="middle-content">
                 <Link to="/category ">
@@ -31,22 +23,19 @@ function Cart({ cartItems }) {
                         <div className="row">
                             <div className="col-12">
                                 <div className="proview-top">
-                                    {cartItems.map((item, index) => (
-                                        <CartBox key={index} {...item} />
-                                    ))}
+                                    <CartBox/>
                                 </div>
                             </div>
 				            <div className="col-12">
                                 <div className="cart-total">
 							        <h3 className='Total'>
-										Total:  {total.toFixed(2)}<KD />
+										Total:  {total.toFixed(2)}
 								    </h3>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div className="container comm-mob-sec">
                     <div className="row">
                         <div className="col-12">
@@ -66,15 +55,15 @@ function Cart({ cartItems }) {
                         </div>
                         <div className="swiper product-sliding product-common-swiper">
                             <div className="row common-slick-slide swiper-wrapper">
-                                <Card name="products" Name="Structure material" Image='assets/images/pro-1.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
+                                <Card/>
                       
-								<Card name="products" Name="Structure material" Image='assets/images/pro-2.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
+								{/* <Card name="products" Name="Structure material" Image='assets/images/pro-2.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
 
 								<Card name="products" Name="Structure material" Image='assets/images/pro-3.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
 
 							<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
 
-							<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
+							<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " /> */}
                             </div>
                             <div className="swiper-button-prev common-swipercontrol-btn"></div>
                             <div className="swiper-button-next common-swipercontrol-btn"></div>
@@ -88,4 +77,4 @@ function Cart({ cartItems }) {
 
 export default Cart;
 
-///////////////////////////////////////////////////////////////
+

@@ -72,7 +72,7 @@ function Orderlist() {
 							<table>
 								<tbody>
 									<tr>
-										<td colspan="6">
+										<td colSpan="6">
 											<table className="secondlevel-table">
 												<tr>
 													<td>
@@ -112,7 +112,7 @@ function Orderlist() {
 										</td>
 									</tr>
 									<tr>
-										<td colspan="6">
+										<td colSpan="6">
 											<table className="secondlevel-table">
 												<tr>
 													<td>
@@ -152,7 +152,7 @@ function Orderlist() {
 										</td>
 									</tr>
 									<tr>
-										<td colspan="6">
+										<td colSpan="6">
 											<table className="secondlevel-table">
 												<tr>
 													<td>

@@ -1,7 +1,7 @@
 import React from 'react';
-import Navi from './Navi';
-
+import Navi from './Navi'
 const App = () => {
+  
   return (
     <div>
       <Navi/>

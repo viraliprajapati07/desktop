@@ -3,30 +3,21 @@ import { Carousel } from 'react-bootstrap';
 import Card from './Product/Card';
 import CategoryBox from './Category/CategoryBox';
 import InfluencerBox from './Influencers/InfluencerBox';
-
-
-
 const Home = ({ addToCart }) => {
-
-	const [index, setIndex] = useState(0);
-
-	const handleSelect = (selectedIndex) => {
+	 const [index, setIndex] = useState(0);
+	 const handleSelect = (selectedIndex) => {
 		setIndex(selectedIndex);
 	};
-
 	useEffect(() => {
 		const interval = setInterval(() => {
-			const nextIndex = (index + 1) % 3; // Change '3' to the total number of images
+			const nextIndex = (index + 1) % 3;
 			setIndex(nextIndex);
 		}, 2500);
-
 		return () => clearInterval(interval);
 	}, [index]);
-
 	const handleRadioChange = (selectedIndex) => {
 		setIndex(selectedIndex);
 	};
-
 	return (
 		<>
 			<div className="mobile-sidebar">
@@ -117,8 +108,6 @@ const Home = ({ addToCart }) => {
 											</div>
 										</Carousel.Caption>
 									</Carousel.Item>
-
-
 									<Carousel.Item>
 										<img
 											className="d-block w-100"
@@ -187,36 +176,29 @@ const Home = ({ addToCart }) => {
 							<div className="swiper-pagination"></div>
 						</div>
 					</div>
-
 					<div className="best-seller product-slider comm-mob-sec">
 						<div className="container">
-							<div className="row">
+						<div className="row">
 								<div className="col-12">
 									<div className="product-main-title common-main-title">
 										<h2>Best seller</h2>
 										<a href="#" className="view-moreLink">View all</a>
 									</div>
-								</div>
+									</div>
+										<Card/>
+										{/* <Card/>
+										<Card/>
+										<Card/> */}
 							</div>
 							<div className="swiper product-sliding product-common-swiper">
 								<div className="row common-slick-slide swiper-wrapper">
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-1.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 "addToCart={addToCart} />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-2.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 "addToCart={addToCart} />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-3.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 "addToCart={addToCart} />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " addToCart={addToCart}/>
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 "addToCart={addToCart} />
-								</div>
+                                 </div>
 								<div className="swiper-button-prev common-swipercontrol-btn"></div>
 								<div className="swiper-button-next common-swipercontrol-btn"></div>
+								
 							</div>
 						</div>
 					</div>
-
 					<div className="new-product product-slider comm-mob-sec">
 						<div className="container">
 							<div className="row">
@@ -229,26 +211,17 @@ const Home = ({ addToCart }) => {
 							</div>
 							<div className="swiper product-sliding product-common-swiper">
 								<div className="row common-slick-slide swiper-wrapper">
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-5.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-6.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-7.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-8.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-8.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
-
+									<Card />
+									{/* <Card />
+									<Card />
+									<Card /> */}
 								</div>
 								<div className="swiper-button-prev common-swipercontrol-btn"></div>
 								<div className="swiper-button-next common-swipercontrol-btn"></div>
 							</div>
 						</div>
 					</div>
-
 					<div className="mob-shoptabs">
-
 						<div className="tab-content" id="myTabContent">
 							<div className="tab-pane fade show active" id="mob_shopbycat" role="tabpanel" aria-labelledby="mob_shopbycat-tab">
 								<div className="shopbycat">
@@ -261,22 +234,18 @@ const Home = ({ addToCart }) => {
 											</div>
 										</div>
 										<div className="row">
-											<CategoryBox img="assets/images/cat-back-1.png" h4="MATRIAL" />
-
+											{/* <CategoryBox img="assets/images/cat-back-1.png" h4="MATRIAL" />
 											<CategoryBox img="assets/images/cat-back-2.png" h4="Tools" />
-
 											<CategoryBox img="assets/images/cat-back-3.png" h4="ASMENT" />
-
-											<CategoryBox img="assets/images/cat-back-4.png" h4="WOOD" />
-
-										</div>
+											<CategoryBox img="assets/images/cat-back-4.png" h4="WOOD" /> */}
+											<CategoryBox/>
+											
+										 </div>
 									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
-
 					<div className="influencers product-slider comm-mob-sec">
 						<div className="container">
 							<div className="row">
@@ -289,23 +258,14 @@ const Home = ({ addToCart }) => {
 							</div>
 							<div className="swiper product-common-swiper influencers-sliding">
 								<div className="common-slick-slide swiper-wrapper">
-
 									<InfluencerBox img="assets/images/influencers-1.png" alt="influencers image" />
-
 									<InfluencerBox img="assets/images/influencers-2.png" alt="influencers image" />
-
 									<InfluencerBox img="assets/images/influencers-3.png" alt="influencers image" />
-
 									<InfluencerBox img="assets/images/influencers-4.png" alt="influencers image" />
-
 									<InfluencerBox img="assets/images/influencers-5.png" alt="influencers image" />
-
 									<InfluencerBox img="assets/images/influencers-1.png" alt="influencers image" />
-
 									<InfluencerBox img="assets/images/influencers-2.png" alt="influencers image" />
-
 									<InfluencerBox img="assets/images/influencers-3.png" alt="influencers image" />
-
 								</div>
 								<div className="swiper-button-prev common-swipercontrol-btn"></div>
 								<div className="swiper-button-next common-swipercontrol-btn"></div>
@@ -313,10 +273,9 @@ const Home = ({ addToCart }) => {
 						</div>
 					</div>
 				</section>
-
 			</div>
 		</>
 	)
-}
+} 
 export default Home;
 
