@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 import Card from './Product/Card';
 import LinkFile from './LinkFile/LinkFile';
 import CartBox from './Cart/CartBox';
-import KD from './Price/KD';
+import axios from 'axios';
+// import KD from './Price/KD';
 
-function Cart({ cartItems }) {
+function Cart({ cartItems }) { 
     const [total, setTotal] = useState(0);
 
-	useEffect(() => {
-        const totalPrice = cartItems.reduce((acc, item,total) => acc + (item.Price * item.quantity ), 0);
-		setTotal(totalPrice );
-		}, [cartItems]);
+	// useEffect(() => {
+    //     const totalPrice = cartItems.reduce((acc, item) => acc + (item.Price * item.quantity ), 0);
+	// 	setTotal(totalPrice );
+	// 	}, [cartItems]);
 	
         return (
         <>
@@ -31,15 +32,16 @@ function Cart({ cartItems }) {
                         <div className="row">
                             <div className="col-12">
                                 <div className="proview-top">
-                                    {cartItems.map((item, index) => (
-                                        <CartBox key={index} {...item} />
-                                    ))}
+                                    
+                                        <CartBox  />
+                                 
+                                      {/* <CartBox cart_items={cartItems} /> */}
                                 </div>
                             </div>
 				            <div className="col-12">
                                 <div className="cart-total">
 							        <h3 className='Total'>
-										Total:  {total.toFixed(2)}<KD />
+										Total:  {total.toFixed(2)}
 								    </h3>
                                 </div>
                             </div>

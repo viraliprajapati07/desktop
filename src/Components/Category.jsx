@@ -5,6 +5,7 @@ import Card from './Product/Card';
 
 
 const Category = () => {
+	
 
 	const [index, setIndex] = useState(0);
 

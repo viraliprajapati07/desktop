@@ -11,7 +11,7 @@ import Category from './Components/Category';
 import Categorlist from './Components/CategorList';
 import Orderlist from './Components/OrderList';
 import Profileinfo from './Components/Profileinfo';
-import Addresses from './Components/Address';
+import Addresses from './Components/Addresses';
 import Footer from './Components/Footer';
 import Changepassword from './Components/ChangePassword';
 import Cart from './Components/Cart';
@@ -26,7 +26,6 @@ import Login from './Components/Login';
 import Productview from './Components/ProductView';
 
 
-
 const Navi = () => {
   const [cartItems, setCartItems] = useState([]);
 
@@ -37,7 +36,6 @@ const Navi = () => {
   return (
     <Router>
       <Header />
-      
       <Routes>
       <Route path="/" element={<Home addToCart={addToCart} />} /> {/* Pass addToCart as a prop to the Home component */}
         <Route path="/cart" element={<Cart cartItems={cartItems} />} />
@@ -50,7 +48,7 @@ const Navi = () => {
         <Route path="/categorlist" element={<Categorlist />} />
         <Route path="/orderlist" element={<Orderlist />} />
         <Route path="/profileinfo" element={<Profileinfo />} />
-        <Route path='/addresses' element={<Addresses/>}/>
+        <Route path='/address' element={<Addresses/>}/>
         <Route path='/changepassword' element={<Changepassword/>}/>
         {/* <Route path='/cart' element={<Cart/>}/> */}
         <Route path="/category" element={<Category />} />

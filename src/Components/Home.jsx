@@ -3,10 +3,12 @@ import { Carousel } from 'react-bootstrap';
 import Card from './Product/Card';
 import CategoryBox from './Category/CategoryBox';
 import InfluencerBox from './Influencers/InfluencerBox';
+import  axios  from 'axios';
 
 
+const Home = ({ addToCart}) => {
+	 
 
-const Home = ({ addToCart }) => {
 
 	const [index, setIndex] = useState(0);
 
@@ -16,7 +18,7 @@ const Home = ({ addToCart }) => {
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			const nextIndex = (index + 1) % 3; // Change '3' to the total number of images
+			const nextIndex = (index + 1) % 3;
 			setIndex(nextIndex);
 		}, 2500);
 
@@ -190,6 +192,7 @@ const Home = ({ addToCart }) => {
 
 					<div className="best-seller product-slider comm-mob-sec">
 						<div className="container">
+					
 							<div className="row">
 								<div className="col-12">
 									<div className="product-main-title common-main-title">
@@ -200,20 +203,20 @@ const Home = ({ addToCart }) => {
 							</div>
 							<div className="swiper product-sliding product-common-swiper">
 								<div className="row common-slick-slide swiper-wrapper">
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-1.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 "addToCart={addToCart} />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-2.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 "addToCart={addToCart} />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-3.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 "addToCart={addToCart} />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " addToCart={addToCart}/>
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-4.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 "addToCart={addToCart} />
+                                 
+										<Card /> 
+										<Card />
+										<Card />
+										<Card  />
+										<Card  />
+									
 								</div>
 								<div className="swiper-button-prev common-swipercontrol-btn"></div>
 								<div className="swiper-button-next common-swipercontrol-btn"></div>
+								
 							</div>
+						
+
 						</div>
 					</div>
 
@@ -230,15 +233,11 @@ const Home = ({ addToCart }) => {
 							<div className="swiper product-sliding product-common-swiper">
 								<div className="row common-slick-slide swiper-wrapper">
 
-									<Card name="products" Name="Structure material" Image='assets/images/pro-5.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-6.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-7.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-8.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
-
-									<Card name="products" Name="Structure material" Image='assets/images/pro-8.png' InnerLabel='Suppler:' P="Hempel" L="Weight:" Span="1x50 ML" UnitLabel="Unit Type:" PriceP="Piece" CartImage="assets/images/add-cart.png" Icon="fa fa-star-o" Del="12.00" Price="12.00 " />
+								<Card  onAddToCart={addToCart}/>
+								<Card  onAddToCart={addToCart}/>
+								<Card  onAddToCart={addToCart}/>	
+								<Card  onAddToCart={addToCart}/>
+								<Card  onAddToCart={addToCart}/>
 
 								</div>
 								<div className="swiper-button-prev common-swipercontrol-btn"></div>
@@ -261,14 +260,7 @@ const Home = ({ addToCart }) => {
 											</div>
 										</div>
 										<div className="row">
-											<CategoryBox img="assets/images/cat-back-1.png" h4="MATRIAL" />
-
-											<CategoryBox img="assets/images/cat-back-2.png" h4="Tools" />
-
-											<CategoryBox img="assets/images/cat-back-3.png" h4="ASMENT" />
-
-											<CategoryBox img="assets/images/cat-back-4.png" h4="WOOD" />
-
+											<CategoryBox/>
 										</div>
 									</div>
 								</div>
@@ -313,7 +305,7 @@ const Home = ({ addToCart }) => {
 						</div>
 					</div>
 				</section>
-
+{/* {content} */}
 			</div>
 		</>
 	)
